@@ -1,0 +1,13 @@
+// this is the only css which make selected menu appears different than other menu items
+selected or highlighted 
+{ 
+ color: red;
+ background: yellow;
+}
+ body#link1 a#link1,
+ body#link2 a#link2,
+ body#link3 a#link3,
+ body#link4 a#link4{
+         color: red;
+        background: yellow;
+ }

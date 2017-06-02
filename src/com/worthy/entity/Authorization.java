@@ -49,5 +49,4 @@ public class Authorization {
 	public void setRoles(Roles roles) {
 		this.roles = roles;
 	}
-	
 }

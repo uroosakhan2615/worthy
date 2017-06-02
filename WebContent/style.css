@@ -152,9 +152,9 @@ blockquote {
 	z-index: 2;
 }
 .subfooter {
-	background-color: #fafafa;
+	/* background-color: #fafafa; 
 	border-top: 1px solid #f3f3f3;
-	border-bottom: 1px solid #f3f3f3;
+	border-bottom: 1px solid #f3f3f3;*/
 	padding: 40px 0;
 }
 .section {
@@ -195,7 +195,7 @@ blockquote {
 .default-bg a,
 .translucent-bg a {
 	color: #ffffff;
-	text-decoration: underline;
+	text-decoration: none;
 }
 .default-bg a:hover,
 .translucent-bg a:hover {

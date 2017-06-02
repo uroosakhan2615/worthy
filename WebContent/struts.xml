@@ -22,6 +22,10 @@
             method="execute">
             <result name="anam">/HelloWorld.jsp</result>
       </action>
+      <definition name="appointment" extends="login-success">
+  <put-attribute name="body"   value="/Appointments/02_FirstScreen.jsp"/>      
+  <put-attribute name="menuselection"   value="link1"/>      
+</definition> 
 		
 	</package>
 	

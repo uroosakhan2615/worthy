@@ -11,8 +11,11 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.worthy.beans.SearchBean;
+import com.worthy.dao.StatefulDaoSupport;
+import com.worthy.dao.StatefulDaoSupportImpl;
 import com.worthy.dao.UserDAO;
 import com.worthy.dao.UserDAOImpl;
+import com.worthy.entity.Marquee;
 import com.worthy.entity.User;
 
 public class UserAction extends ActionSupport implements ModelDriven<User> {
@@ -22,8 +25,17 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	private User user = new User();
 	private List<User> userList = new ArrayList<User>();
 	private UserDAO userDAO = new UserDAOImpl();
+	private StatefulDaoSupport statfulDao = new StatefulDaoSupportImpl();
+	private User editUser;
 	private SearchBean searhBean;
 	private String msg;
+	private String marqueename;
+	private int userId;
+	private String address;
+	private String city;
+	private int phoneno;
+	private String email;
+	
 	
 	public User getModel() {
 		return user;
@@ -33,6 +45,28 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	{	
 		return SUCCESS;
 	}
+	
+	public String admin()
+	{	
+		return SUCCESS;
+	}
+	
+	public String getlogin()
+	{	
+		return SUCCESS;
+	}
+	
+	
+	public String login()
+	{	
+		User loginUser=userDAO.getUserByEmailAndPassword(user.getEmail(), user.getPassword());
+		if(loginUser!=null){
+			loginUser.getUserName().equals("Admin");
+			return SUCCESS;
+		}
+		return ERROR;
+	}
+	
 	
 	public String searchMarqueeAction() {
 		System.out.println(searhBean.getCapacity());
@@ -55,13 +89,16 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		return SUCCESS;
 	}
 	
-	/**
-	 * To list all users.
-	 * @return String
-	 */
 	public String list()
 	{
-		userList = userDAO.listUser();
+		userList = statfulDao.findAll(User.class);
+		return SUCCESS;
+	}
+	
+	//Get jsp page to edit marquee
+	public String getEditUserJsp()
+	{	
+		editUser=statfulDao.findById(User.class, userId);
 		return SUCCESS;
 	}
 	
@@ -72,7 +109,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	public String delete()
 	{
 		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
-		userDAO.deleteUser(Integer.parseInt(request.getParameter("id")));
+//		userDAO.deleteUser(Integer.parseInt(request.getParameter("id")));
 		return SUCCESS;
 	}
 	
@@ -86,6 +123,28 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		user = userDAO.listUserById(Integer.parseInt(request.getParameter("id")));
 		return SUCCESS;
 	}
+	
+	public String editUser()
+	{	
+		//statfulDao = new StatefulDaoSupportImpl();
+		User userFromDb=statfulDao.findById(User.class, user.getId());
+		if(userFromDb!=null){
+			userFromDb.setUserName(user.getUserName());
+			userFromDb.setEmail(user.getEmail());
+			statfulDao.saveOrUpdate(userFromDb);
+		}
+		return SUCCESS;
+	}
+	
+	public String deleteUser() {
+		  User userToDelete=statfulDao.findById(User.class, userId);
+		  if(userToDelete!=null){
+			  statfulDao.delete(userToDelete);
+			  return SUCCESS;
+		  }
+		  return ERROR;
+		}
+	/* -------------------------------- Getter Setter ------------------------------------- */
 	
 	public User getUser() {
 		return user;
@@ -118,4 +177,69 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
+	public String getMarqueename() {
+		return marqueename;
+	}
+
+	public void setMarqueename(String marqueename) {
+		this.marqueename = marqueename;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public int getPhoneno() {
+		return phoneno;
+	}
+
+	public void setPhoneno(int phoneno) {
+		this.phoneno = phoneno;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public StatefulDaoSupport getStatfulDao() {
+		return statfulDao;
+	}
+
+	public void setStatfulDao(StatefulDaoSupport statfulDao) {
+		this.statfulDao = statfulDao;
+	}
+
+	public User getEditUser() {
+		return editUser;
+	}
+
+	public void setEditUser(User editUser) {
+		this.editUser = editUser;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
 }

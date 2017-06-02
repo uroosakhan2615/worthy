@@ -16,7 +16,7 @@
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
 								<div class="site-name"><a href="#banner">SMBS</a></div>
-								<div class="site-slogan">Worthy Marquee <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a></div>
+								<div class="site-slogan">Worthy Marquee Booking System</div>
 							</div>
 
 						</div>
@@ -52,7 +52,7 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="home.jsp">Home</a></li>
-										        <li><a href="about.jsp">About</a></li>
+										        <li class="selected" ><a href="about.jsp">About</a></li>
 												<li><a href="services.jsp">Services</a></li>
 												<li><a href="portfolio.jsp">portfolio</a></li>
 												<li><a href="Testimonials.jsp">Testimonials</a></li>

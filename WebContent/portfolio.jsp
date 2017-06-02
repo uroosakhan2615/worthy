@@ -78,8 +78,7 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio1.jpg" alt="">
@@ -118,8 +117,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
+
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio2.jpg" alt="">
@@ -158,8 +157,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests..</p>
+										
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio3.jpg" alt="">
@@ -198,8 +197,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
+												
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio4.jpg" alt="">
@@ -238,8 +237,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
+														
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio15.jpg" alt="">
@@ -278,8 +277,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
+													
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio6.jpg" alt="">
@@ -318,8 +317,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>  </p>
+														<p>  </p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio7.jpg" alt="">
@@ -358,8 +357,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p>
+													
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio8.jpg" alt="">
@@ -398,8 +397,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p><p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p></p>
+														
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio9.jpg" alt="">
@@ -418,7 +417,7 @@
 							<div class="col-sm-6 col-md-3 isotope-item site-building">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/portfolio-10.jpg" alt="">
+										<img src="images/portfolio10.jpg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-10">
 											<i class="fa fa-search-plus"></i>
 											<span>Site Building</span>
@@ -438,11 +437,11 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														
+														<p><p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p></p>
 													</div>
 													<div class="col-md-6">
-														<img src="images/portfolio-10.jpg" alt="">
+														<img src="images/portfolio10.jpg" alt="">
 													</div>
 												</div>
 											</div>
@@ -478,8 +477,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+											
+														<p><p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p></p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio11.jpg" alt="">
@@ -498,7 +497,7 @@
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="img/portfolio12.jpg" alt="">
+										<img src="images/portfolio17.jpg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-12">
 											<i class="fa fa-search-plus"></i>
 											<span>App Development</span>
@@ -518,8 +517,8 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+											
+														<p><p>We are providing best quality / melodic theme base wedding events in Pakistan. This memorable occasion comes once a time in the life. We plan events in Pakistan according to the requirements of our valuable clients on affordable budget. If you are looking the best place for wedding planning, wedding designer, wedding organizing company and event management companies so please contact Tulips Event. We decorate beautiful weddings stages, like Mehendi Stage, Walima Stage, Baraat Stage designs, background soft wedding dj music according to the customers' satisfaction. We have professional interior designers to décor the whole function according to our customs. We see the real picture of events in Pakistani culture including the days of celebration i.e., Mangnee (Engagement Day), Mayoon (Yellow Day), Dholak (Musical Night), Mehndi, Nikah, and Valima. These days have values in our Pakistani culture. So we Pakistani celebrate these important days and invite guests to participate these events. The weddings event in Pakistan is good display of customs and traditions. So we Tulips Event provide you the best possible environment to create attractiveness for your valuable guests.</p><p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio13.jpg" alt="">

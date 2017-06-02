@@ -21,21 +21,12 @@ public class Marquee {
 	
 	@Column(name = "MARQUEE_ADDRESS")
 	private String marqueeAddress;
-	
 
 	@Column(name = "MARQUEE_CONTACT")
 	private String marqueeContact;
 	
 	@Column(name = "MARQUEE_EMAILId")
-	private String marqueeEmaiId;
-	
-	
-//	@OneToMany(mappedBy="")
-//	List<Event> events;
-	
-	
-	
-	
+	private String marqueeEmailId;
 	
 	public int getId() {
 		return id;
@@ -61,4 +52,19 @@ public class Marquee {
 		this.marqueeAddress = marqueeAddress;
 	}
 
+	public String getMarqueeContact() {
+		return marqueeContact;
+	}
+
+	public void setMarqueeContact(String marqueeContact) {
+		this.marqueeContact = marqueeContact;
+	}
+
+	public String getMarqueeEmailId() {
+		return marqueeEmailId;
+	}
+
+	public void setMarqueeEmailId(String marqueeEmailId) {
+		this.marqueeEmailId = marqueeEmailId;
+	}
 }

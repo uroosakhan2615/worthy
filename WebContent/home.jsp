@@ -47,6 +47,7 @@
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">We are <span>Worthy</span></h1>
 							<p class="lead text-center">TO PROVIDE & DELIVER EVENT SOLUTIONS & SERVICES WITH THE HIGHEST STANDARD OF PROFESSIONALISM, CREATIVITY UPHOLDING AT ALL TIMES QUALITY, INTEGRITY AND INNOVATION.</p>
+						&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 							<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Login </button>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
@@ -171,6 +172,10 @@
         </div>
     </div>
 </div>
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-primary" data-toggle="modal" data-target="portfolio.jsp">
+                   Book a marquee </button>
+    
 						</div>
 					</div>
 					

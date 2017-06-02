@@ -34,7 +34,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body  background="images/searchBg.jpg">
 		<div class="search-background">
             <img src="images/searchBg.jpg">
         </div>
@@ -56,7 +56,7 @@
                         <label class="col-md-4 control-label">Event type </label>
                         <div class="col-md-8">
                             <select class="form-control" name="searhBean.eventType">
-								<option value=""></option>
+							<option value="">	 </option>
 								<option value="Marriage">Marriage Ceremony</option>
 								<option value="Birthday">Birthday Parties</option>
 								<option value="political">political events</option>
@@ -68,7 +68,7 @@
                         <label class="col-md-4 control-label">Capacity</label>
                         <div class="col-md-8">
                             <select class="form-control" name="searhBean.capacity">
-                             <option value=""> </option>
+                             <option value="">Enter capacity </option>
                                 <option value="500"><500 to 1000</option>
                                 <option value="2000">2000 to 3000</option>
                                 <option value="4000">4000 to 5000</option>
@@ -81,7 +81,8 @@
                         <label class="col-md-4 control-label">City</label>
                         <div class="col-md-8">
                             <select class="form-control" name="searhBean.city">
-                            <option disabled value="Select Item"> </option>
+                            <option disabled value="Select Item" value="">"" </option>
+                            <option value="Islamabad">select city</option>
                                 <option value="Islamabad">Islamabad</option>
                                 <option value="Lahore">Lahore</option>
                                 <option value="Rawalpindi">Rawalpindi</option>

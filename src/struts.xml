@@ -7,16 +7,30 @@
 		<action name="saveOrUpdateUser" method="saveOrUpdate" class="com.worthy.web.UserAction">
 			<result name="success" type="redirect">listUser</result>
 		</action>
+		
+		<action name="registerMarquee" method="saveUpdateMarquee" class="com.worthy.web.MarqueeAction">
+			<result name="success" type="redirect">marqueeList</result>
+		</action>
+		
+		<action name="marqueeList" method="marqueeList" class="com.worthy.web.MarqueeAction">
+			<result name="success">/admin/marquee.jsp</result>
+		</action>
+		
+		<action name="getEditMarquee" method="getEditMarqueeJsp" class="com.worthy.web.MarqueeAction">
+			<result name="success">/editMarquee.jsp</result>
+		</action>
+		
 		<action name="listUser" method="list" class="com.worthy.web.UserAction">
 			<result name="success">/register.jsp</result>
 		</action>
+		
 		<action name="editUser" method="edit" class="com.worthy.web.UserAction">
 			<result name="success">/register.jsp</result>
 		</action>
-		<action name="deleteUser" method="delete" class="com.worthy.web.UserAction">
+		<!-- <action name="deleteUser" method="delete" class="com.worthy.web.UserAction">
 			<result name="success" type="redirect">listUser</result>
 		</action>
-		
+		 -->
 		<action name="search" method="search" class="com.worthy.web.UserAction">
 			<result name="success">/search.jsp</result>
 		</action>
@@ -25,8 +39,61 @@
 			<result name="success">/search.jsp</result>
 		</action>
 		
+		<action name="admin" method="admin" class="com.worthy.web.UserAction">
+			<result name="success">/admin/home.jsp</result>
+		</action>		
 		
+		<action name="loginpage" method="getlogin" class="com.worthy.web.UserAction">
+			<result name="success">/admin/login.jsp</result>
+		</action>
 		
+		<action name="login" method="login" class="com.worthy.web.UserAction">
+			<result name="success">/admin/pages/tables/data.html</result>
+			<result name="error">/admin.jsp</result>
+		</action>
 		
+		<action name="submit" method="submit" class="com.worthy.web.UserAction">
+			<result name="success">/admin/index.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+		
+		<action name="userList" method="list" class="com.worthy.web.UserAction">
+			<result name="success">/admin/user.jsp</result>
+		</action>
+		
+		<action name="getEditUser" method="getEditUserJsp" class="com.worthy.web.UserAction">
+			<result name="success">/editUser.jsp</result>
+		</action>
+		
+		<action name="menuList" method="menuList" class="com.worthy.web.MenuAction">
+			<result name="success">/admin/menu.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="admin" namespace="/admin" extends="hibernate-default">
+		<action name="editMarquee" method="editMarquee" class="com.worthy.web.MarqueeAction">
+			<result name="success" type="redirect">marqueeList</result>
+		</action>
+		
+		<action name="editUser" method="editUser" class="com.worthy.web.UserAction">
+			<result name="success" type="redirect">userList</result>
+		</action>
+		
+		<action name="editMenu" method="editMenu" class="com.worthy.web.UserAction">
+			<result name="success" type="redirect">userList</result>
+		</action>
+		
+		<action name="deleteUser" method="deleteUser" class="com.worthy.web.UserAction">
+			<result name="success">success.jsp</result>
+		</action>
+		
+		<action name="deleteMarquee" method="deleteMarquee" class="com.worthy.web.MarqueeAction">
+			<result name="success">success.jsp</result>
+		</action>
+		
+		<action name="deleteMenu" method="deleteMenu" class="com.worthy.web.MarqueeAction">
+			<result name="success">success.jsp</result>
+		</action>
 	</package>
 </struts>

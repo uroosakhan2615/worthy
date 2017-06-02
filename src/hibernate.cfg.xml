@@ -12,13 +12,15 @@
    <property name="hibernate.hbm2ddl.auto">update</property>
    <property name="show_sql">true</property>
    
-   <mapping class="com.worthy.entity.User"/>
-   <mapping class="com.worthy.entity.Roles"/>
-   <mapping class="com.worthy.entity.UserRoles"/>
-   <mapping class="com.worthy.entity.Event"/>
-   <mapping class="com.worthy.entity.Marquee"/>
-    <mapping class="com.worthy.entity.Permissions"/>
-     <mapping class="com.worthy.entity.Authorization"/>
-   
+   <mapping class="com.worthy.entity.User" />
+	<mapping class="com.worthy.entity.Roles" />
+	<mapping class="com.worthy.entity.UserRoles" />
+	<mapping class="com.worthy.entity.Event" />
+	<mapping class="com.worthy.entity.Marquee" />
+	<mapping class="com.worthy.entity.Permissions" />
+	<mapping class="com.worthy.entity.Authorization" />
+	<mapping class="com.worthy.entity.MarqueeDetails" />
+	<mapping class="com.worthy.entity.Menu" />
+        
 </session-factory>
 </hibernate-configuration>

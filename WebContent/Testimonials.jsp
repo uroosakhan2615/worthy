@@ -46,10 +46,10 @@
 								<img src="images/testimonial-1.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Mr.Tariq</h3>
+								<h3 class="media-heading">Mr.Talha</h3>
 								<blockquote>
 									<p> Silver Star Group - Sialkot PAK
-SMBS Team was made our event not only more thematically, decorative infect with complete perfect arrangements. Every guest commented and appreciates the work done at venue. We'll be making a long relation with team from now days. </p>
+                                     SMBS Team was made our event not only more thematically, decorative infect with complete perfect arrangements. Every guest commented and appreciates the work done at venue. We'll be making a long relation with team from now days. </p>
 									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 								</blockquote>
 							</div>
@@ -61,7 +61,7 @@ SMBS Team was made our event not only more thematically, decorative infect with 
 								<img src="images/testimonial-2.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Mr.Saif-ur-Rehman(Associate professor in UIIT)</h3>
+								<h3 class="media-heading">Mr.Shakeel</h3>
 								<blockquote>
 									<p> We planned our daughter first birthday early using your site. We had it to fit in with relatives visiting when she was only 11 months old. Choosing the princess theme was the most perfect decision that we made with the help of you guys. We kept going. Really good to see our family relatives and the tips on noise were the best.</p>
 									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -75,7 +75,7 @@ SMBS Team was made our event not only more thematically, decorative infect with 
 								<img src="images/testimonial-3.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Mr.Azzeem</h3>
+								<h3 class="media-heading">Mr.Mansoor</h3>
 								<blockquote>
 									<p> THANK YOU SO MUCH for the fabulous and unforgettable themed birthday party you prepared for Logan for his 1st Birthday! We had SO MUCH FUN, everything was great, the activities, the setting, all those animals around us, we just loved it!!!!! And the best of the best... the pinata activity, it was so fun to see all the kids playing with it..</p>
 									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -146,7 +146,7 @@ SMBS Team was made our event not only more thematically, decorative infect with 
 		</div>
 		</div>
 		<!-- section end -->
-		 <!-- .subfooter start -->
+		<!-- .subfooter start -->
 			<!-- ================ -->
 			<jsp:include page="footer.jsp"></jsp:include>
 			<!-- .subfooter end -->

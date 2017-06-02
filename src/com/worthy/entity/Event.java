@@ -21,6 +21,7 @@ public class Event {
 	@Column(name = "EVENT_NAME")
 	private String eventName;
 	
+	@Column(name = "STATUS")
 	private String status;
 	
 	@ManyToOne

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+
+	<package name="user" namespace="/" extends="struts-default">
+		<action name="Login">
+			<result>login.jsp</result>
+		</action>
+		<action name="Welcome" class="com.mkyong.user.action.WelcomeUserAction">
+			<result name="SUCCESS">welcome_user.jsp</result>
+		</action>
+		
+		<action name="test" method="test" class="com.mkyong.user.action.WelcomeUserAction">
+			<result name="SUCCESS">login.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		 <action name="hello" 
+            class="com.tutorialspoint.struts2.HelloWorldAction" 
+            method="execute">
+            <result name="anam">/HelloWorld.jsp</result>
+      </action>
+		
+	</package>
+	
+</struts>

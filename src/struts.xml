@@ -1,0 +1,32 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="saveOrUpdateUser" method="saveOrUpdate" class="com.worthy.web.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		</action>
+		<action name="listUser" method="list" class="com.worthy.web.UserAction">
+			<result name="success">/register.jsp</result>
+		</action>
+		<action name="editUser" method="edit" class="com.worthy.web.UserAction">
+			<result name="success">/register.jsp</result>
+		</action>
+		<action name="deleteUser" method="delete" class="com.worthy.web.UserAction">
+			<result name="success" type="redirect">listUser</result>
+		</action>
+		
+		<action name="search" method="search" class="com.worthy.web.UserAction">
+			<result name="success">/search.jsp</result>
+		</action>
+			
+		<action name="searchMarquee" method="searchMarqueeAction" class="com.worthy.web.UserAction">
+			<result name="success">/search.jsp</result>
+		</action>
+		
+		
+		
+		
+	</package>
+</struts>

@@ -28,10 +28,13 @@ public class MarqueeDetails {
 	@Column(name = "CITY")
 	private String city;
 	
+	@Column(name = "ADDRESS")
+	private String address;
 	
 	@ManyToOne
 	@JoinColumn(name="MARQUEE_ID")
 	Marquee marquee;
+	
 	public int getId() {
 		return id;
 	}

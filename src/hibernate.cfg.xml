@@ -21,6 +21,8 @@
 	<mapping class="com.worthy.entity.Authorization" />
 	<mapping class="com.worthy.entity.MarqueeDetails" />
 	<mapping class="com.worthy.entity.Menu" />
+	<mapping class="com.worthy.entity.Hall" />
+	<mapping class="com.worthy.entity.city" />
         
 </session-factory>
 </hibernate-configuration>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title>Worthy | online marquee system</title>
@@ -14,10 +11,10 @@
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico">
-
+		
 		<jsp:include page="styles.jsp"></jsp:include>
+		<jsp:include page="admin/libIncludes.jsp"></jsp:include>
 	</head>
-
 	<body class="no-trans">
 		<!-- scrollToTop -->
 		<!-- ================ -->
@@ -48,8 +45,7 @@
 							<h1 class="text-center">We are <span>Worthy</span></h1>
 							<p class="lead text-center">TO PROVIDE & DELIVER EVENT SOLUTIONS & SERVICES WITH THE HIGHEST STANDARD OF PROFESSIONALISM, CREATIVITY UPHOLDING AT ALL TIMES QUALITY, INTEGRITY AND INNOVATION.</p>
 						&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-							<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Login </button>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Login </button>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -173,29 +169,85 @@
     </div>
 </div>
 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button class="btn btn-primary" data-toggle="modal" data-target="portfolio.jsp">
-                   Book a marquee </button>
-    
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	 
-		<!-- banner end -->
-		<!-- footer start -->
-		<!-- ================ -->
+          <button class="btn btn-primary" data-toggle="modal" data-target="#bookMarquee"> Book a marquee </button>
+          
+          <div class="modal fade" id="bookMarquee" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Book a Marquee
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+	                    <form class="form-horizontal">
+	                        <div class="form-group">
+	                             <label for="city" class="col-sm-2 control-label">
+	                                 City</label>
+	                             <div class="col-sm-10">
+	                                 <input type="city" class="form-control input-sm datepicker" id="city" placeholder="city">
+	                             </div>
+	                         </div>
+	                         <div class="form-group">
+	                             <label for="marquee name" class="col-sm-2 control-label">
+	                                 Marquee Name</label>
+	                             <div class="col-sm-10">
+	                                 <input type="marquee name" class="form-control input-sm datepicker" id="calander" placeholder="marquee name">
+	                             </div>
+	                         </div>
+	                         <div class="form-group">
+	                             <label for="hall" class="col-sm-2 control-label">
+	                                 Hall</label>
+	                             <div class="col-sm-10">
+	                                 <input type="hall" class="form-control input-sm datepicker" id="hall" placeholder="hall">
+	                             </div>
+	                         </div>
+	                         <div class="form-group">
+	                             <label for="location" class="col-sm-2 control-label">
+	                                 Location</label>
+	                             <div class="col-sm-10">
+	                                 <input type="location" class="form-control" id="location" placeholder="location">
+	                             </div>
+	                         </div>
+	                         
+	                        <div class="bootstrap-iso">
+                     <div class="container-fluid">
+                         <div class="row">
+                           <div class="form-group"> <!-- Date input -->
+            <label for="date" class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-10">
+            	<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+           </div>
+            </div>
+              </div>
+                </div>    
+               </div>
+                <div class="form-group">
+	                             <label for="capacity" class="col-sm-2 control-label"> Capacity
+	                                 </label>
+	                             <div class="col-sm-10">
+	                                 <input type="capacity" class="form-control" id="capacity" placeholder="capacity">
+	                             </div>
+	                         </div>
+                    </div>
+	                    </form>                        
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+ 	$('#date').datetimepicker();
+</script> 
 		<footer id="footer">
-
-			
-			<!-- .subfooter start -->
-			<!-- ================ -->
 			<jsp:include page="footer.jsp"></jsp:include>
-			<!-- .subfooter end -->
-
 		</footer>
-		<!-- footer end -->
 	</body>
 </html>
 		

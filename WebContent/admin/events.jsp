@@ -21,7 +21,7 @@
     <div class="container">
   <!-- Trigger the modal with a button -->
   
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Menu</button>
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Event</button>
 
 					<div class="modal fade" id="myModal" role="dialog">
 						<div class="modal-dialog">
@@ -36,9 +36,9 @@
 											<form class="form-horizontal" method="post" action="addMenu">
 												<fieldset>
 													<div class="form-group">
-														<label class="col-md-2 control-label" for="Name">Menu Name</label>
+														<label class="col-md-2 control-label" for="Name">Event Name</label>
 														<div class="col-md-4">
-															<input id="Name" name="menu.name" type="text"
+															<input id="Name" name="event.eventName" type="text"
 																placeholder="Enter Menu Name" class="form-control input-md"
 																required>
 														</div>
@@ -47,14 +47,25 @@
 													<div class="form-group">
 														<label class="col-md-2 control-label" for="address">Event Name</label>
 														<div class="col-md-4">
-															<select class="form-control" name="menu.event.id" required>
-																
-																<s:iterator value="eventList">
-																	<option value="<s:property value="id" />"><s:property value="eventName" /></option>
+															<select class="form-control" name="event.status" required>
+																<option value="">Active</option>
+																<option value="">DeActive</option>
+															</select>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<label class="col-md-2 control-label">Marquee Name</label>
+														<div class="col-md-4">
+															<select class="form-control" name="event.marquee.id" required>
+																<s:iterator value="marqueeList">
+																	<option value="<s:property value="id" />"><s:property value="marqueeName" /></option>
 																</s:iterator>
 															</select>
 														</div>
 													</div>
+													
+													
 
 													<div class="form-group row">
 														<label class="col-md-4 control-label" for="submit"></label>
@@ -98,19 +109,20 @@
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Menu Name</th>
                   <th>Event Name</th>
+                  <th>Status</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
                 </thead>
                <tbody>
-					<s:iterator value="menuList" status="varStatus">
+					<s:iterator value="eventList" status="varStatus">
 						<tr>
-						<td><s:property value="name" /></td>
-						<td><s:property value="event.eventName" /></td>
-						<td><a class="btn btn-sm btn-default editMenu" href="#" id="<s:property value="id" />">Edit</a></td>
-						<td><a class="btn btn-sm btn-danger deleteMenu" href="#" id="<s:property value="id" />">Delete</a></td>
+							<td><s:property value="eventName" /></td>
+							<td><s:property value="status" /></td>
+							<td><a class="btn btn-sm btn-default editEvent" href="#" id="<s:property value="id" />">Edit</a></td>
+							<td><a class="btn btn-sm btn-danger deleteEvent" href="#" id="<s:property value="id" />">Delete</a></td>
+						</tr>
 					</s:iterator>
 				</tbody>
               </table>

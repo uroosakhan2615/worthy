@@ -69,9 +69,15 @@
 			<result name="success">/admin/menu.jsp</result>
 		</action>
 		
+		<action name="eventList" method="eventList" class="com.worthy.web.EventAction">
+			<result name="success">/admin/events.jsp</result>
+		</action>
+		
+		
 	</package>
 	
 	<package name="admin" namespace="/admin" extends="hibernate-default">
+		
 		<action name="editMarquee" method="editMarquee" class="com.worthy.web.MarqueeAction">
 			<result name="success" type="redirect">marqueeList</result>
 		</action>
@@ -92,8 +98,13 @@
 			<result name="success">success.jsp</result>
 		</action>
 		
-		<action name="deleteMenu" method="deleteMenu" class="com.worthy.web.MarqueeAction">
+		<action name="deleteMenu" method="deleteMenu" class="com.worthy.web.MenuAction">
 			<result name="success">success.jsp</result>
 		</action>
+		
+		<action name="addMenu" method="addMenu" class="com.worthy.web.MenuAction">
+			<result name="success" type="redirect">menuList</result>
+		</action>
+		
 	</package>
 </struts>

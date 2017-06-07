@@ -51,7 +51,7 @@
           </a>
         </li> 
         <li>
-          <a href="marqueeList">
+          <a href="eventList">
             <i class="fa fa-th"></i> <span>Event Management</span>            
           </a>
         </li>

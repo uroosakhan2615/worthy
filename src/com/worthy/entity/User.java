@@ -1,13 +1,10 @@
 package com.worthy.entity;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -28,16 +25,19 @@ public class User {
 	@Column(name = "EMAIL")
 	private String email;
 	
-	@OneToMany(mappedBy="user")
-	List<Event> events;
+	@Column(name = "NIC")
+	private String nic;
 	
-	public List<Event> getEvents() {
-		return events;
-	}
-
-	public void setEvents(List<Event> events) {
-		this.events = events;
-	}
+//	@OneToMany(mappedBy="user")
+//	List<Event> events;
+	
+//	public List<Event> getEvents() {
+//		return events;
+//	}
+//
+//	public void setEvents(List<Event> events) {
+//		this.events = events;
+//	}
 
 	public int getId() {
 		return id;
@@ -70,5 +70,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public String getNic() {
+		return nic;
+	}
+
+	public void setNic(String nic) {
+		this.nic = nic;
+	}
 }

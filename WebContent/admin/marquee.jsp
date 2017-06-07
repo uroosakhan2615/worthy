@@ -96,7 +96,7 @@
 																class="form-control input-md" required>
 														</div>
 													</div>
-
+												
 													<!-- Button -->
 													<div class="form-group row">
 														<label class="col-md-4 control-label" for="submit"></label>
@@ -346,7 +346,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/js/toastr.js"></script>
 <script>
   $('#marqueeListTable').DataTable();
-
+  
   //called on modal shown
   $("#createMarquee").on('shown.bs.modal', function(){
 	  $(".modal-backdrop").remove();

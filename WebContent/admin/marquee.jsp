@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>AdminLTE 2 | Data Tables</title>
 <!-- Tell the Marquees_ name to be responsive to screen width -->
-<meta
-	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
 <jsp:include page="libIncludes.jsp"></jsp:include>
 <script src="http://localhost:8080/worthy/admin/js/jquery.dataTables.min.js"></script>
@@ -17,8 +16,6 @@
 		<jsp:include page="header.jsp"></jsp:include>
 		<!-- Left side column. contains the logo and sidebar -->
 		<jsp:include page="sidebar.jsp"></jsp:include>
-
-		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">

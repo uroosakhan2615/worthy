@@ -77,8 +77,6 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public void delet9eUser(int userId) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -89,11 +87,6 @@ public class UserDAOImpl implements UserDAO {
 			criteria.add(Restrictions.eq("password", password));
 			User user=(User) criteria.list().get(0);
 			return user;
-			
-//			Query query= (Query) session.createQuery("From User where email=:email").list();
-//			query.setParameter("email", email);
-//			return (User) query.list().get(0);
-			
 		} catch (Exception e) {
 			transaction.rollback();
 			e.printStackTrace();
@@ -105,7 +98,7 @@ public class UserDAOImpl implements UserDAO {
 	public User findByUserName(String username) {
 		try {
 			Criteria criteria= session.createCriteria(User.class);
-			criteria.add(Restrictions.eq("email", username));
+			criteria.add(Restrictions.eq("userName", username));
 			User user=(User) criteria.list().get(0);
 			return user;
 			

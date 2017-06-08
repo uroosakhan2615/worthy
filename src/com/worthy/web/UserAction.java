@@ -2,10 +2,13 @@ package com.worthy.web;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.dispatcher.SessionMap;
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -15,10 +18,9 @@ import com.worthy.dao.StatefulDaoSupport;
 import com.worthy.dao.StatefulDaoSupportImpl;
 import com.worthy.dao.UserDAO;
 import com.worthy.dao.UserDAOImpl;
-import com.worthy.entity.Marquee;
 import com.worthy.entity.User;
 
-public class UserAction extends ActionSupport implements ModelDriven<User> {
+public class UserAction extends ActionSupport implements ModelDriven<User>, SessionAware {
 
 	private static final long serialVersionUID = -6659925652584240539L;
 
@@ -35,6 +37,13 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	private String city;
 	private int phoneno;
 	private String email;
+	
+	private SessionMap<String, Object> session;
+
+	@Override
+	public void setSession(Map<String, Object> map) {
+		session = (SessionMap<String, Object>) map;
+	}
 	
 	
 	public User getModel() {
@@ -91,8 +100,11 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	
 	public String list()
 	{
+		if(session.get("userId")!=null){
 		userList = statfulDao.findAll(User.class);
 		return SUCCESS;
+		}
+		return ERROR;
 	}
 	
 	//Get jsp page to edit marquee

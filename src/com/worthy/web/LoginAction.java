@@ -9,6 +9,8 @@ import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.worthy.dao.UserDAOImpl;
+import com.worthy.entity.User;
 
 public class LoginAction extends ActionSupport implements SessionAware {
 
@@ -17,7 +19,8 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	// Generate getters and setters....
 	private String userId, userPass, msg;
 	private SessionMap<String, Object> sessionMap;
-
+	private UserDAOImpl userDao = new UserDAOImpl();
+	
 	@Override
 	public void setSession(Map<String, Object> map) {
 		sessionMap = (SessionMap<String, Object>) map;
@@ -26,14 +29,15 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	@Override
 	public String execute() throws Exception {
 		HttpSession session = ServletActionContext.getRequest().getSession(true);
+		
+		User user=userDao.findByUserName(userId);
+		
 		if (userId != null) {
-
-			if (userPass.equals("websparrow")) {
-				// add the attribute in session				
+			if(user.getPassword().equals(userPass)){
 				sessionMap.put("userId", userId);
-
-				return "SUCCESS";
-			} else {
+				return SUCCESS;
+			}
+			else {
 				msg = "Invalid Password";
 				return "LOGIN";
 			}

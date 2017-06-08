@@ -152,7 +152,7 @@ $(".deleteMenu").click(function() {
 		}
 	});
 });
-
+	
 </script>
 </body>
 </html>

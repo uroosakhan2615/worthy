@@ -156,6 +156,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		  }
 		  return ERROR;
 		}
+	
 	/* -------------------------------- Getter Setter ------------------------------------- */
 	
 	public User getUser() {

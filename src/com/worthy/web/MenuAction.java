@@ -25,6 +25,7 @@ public class MenuAction extends ActionSupport implements SessionAware{
 	private List<Menu> menuList=new ArrayList<Menu>();
 	private List<Event> eventList=new ArrayList<Event>();
 	private Menu menu;
+	private Menu editMenu;
 	private int menuId;
 	private SessionMap<String, Object> session;
 
@@ -50,17 +51,50 @@ public class MenuAction extends ActionSupport implements SessionAware{
 		return SUCCESS;
 	}
 
-	public String deleteMenu() {
-		Menu menuToDelete=statfulDao.findById(Menu.class, menuId);
-		  if(menuToDelete!=null){
-			  statfulDao.delete(menuToDelete);
-			  return SUCCESS;
-		  }
-		  return ERROR;
-		}
+	public String getEditMenuJsp()
+	{	
+			editMenu=statfulDao.findById(Menu.class, menuId);
+			eventList=statfulDao.findAll(Event.class);
+			return SUCCESS;
+	}
 	
+	public String editMenu()
+	{	
+		if(session.get("userId")!=null)
+		{	
+			Menu menufromDb=statfulDao.findById(Menu.class, menu.getId());
+			if(menufromDb!=null){
+				Event event=statfulDao.findById(Event.class, menu.getEvent().getId());
+				menufromDb.setmenuName(menu.getmenuName());
+				menufromDb.setEvent(event);
+				statfulDao.saveOrUpdate(menufromDb);
+			}
+			return SUCCESS;
+		}
+		return ERROR;
+	}
+
+	public String deleteMenu() {
+//		if(session.get("userId")!=null){
+			Menu menuToDelete=statfulDao.findById(Menu.class, menuId);
+			if(menuToDelete!=null){
+				statfulDao.delete(menuToDelete);
+				return SUCCESS;
+			}
+//			return ERROR;
+//		}
+		return SUCCESS;
+	}
 	/* -------------------------------- Getter Setter ------------------------------------- */
 	
+	public Menu getEditMenu() {
+		return editMenu;
+	}
+
+	public void setEditMenu(Menu editMenu) {
+		this.editMenu = editMenu;
+	}
+
 	public UserDAO getUserDAO() {
 		return userDAO;
 	}

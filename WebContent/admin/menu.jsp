@@ -35,10 +35,11 @@
 										<div class="row">
 											<form class="form-horizontal" method="post" action="addMenu">
 												<fieldset>
+													
 													<div class="form-group">
 														<label class="col-md-2 control-label" for="Name">Menu Name</label>
 														<div class="col-md-4">
-															<input id="Name" name="menu.name" type="text"
+															<input id="Name" name="menu.menuName" type="text"
 																placeholder="Enter Menu Name" class="form-control input-md"
 																required>
 														</div>
@@ -48,7 +49,6 @@
 														<label class="col-md-2 control-label" for="address">Event Name</label>
 														<div class="col-md-4">
 															<select class="form-control" name="menu.event.id" required>
-																
 																<s:iterator value="eventList">
 																	<option value="<s:property value="id" />"><s:property value="eventName" /></option>
 																</s:iterator>
@@ -64,6 +64,7 @@
 															<button id="submit" name="submit" class="btn btn-success">Submit</button>
 														</div>
 													</div>
+													
 												</fieldset>
 											</form>
 										</div>
@@ -107,7 +108,7 @@
                <tbody>
 					<s:iterator value="menuList" status="varStatus">
 						<tr>
-						<td><s:property value="name" /></td>
+						<td><s:property value="menuName" /></td>
 						<td><s:property value="event.eventName" /></td>
 						<td><a class="btn btn-sm btn-default editMenu" href="#" id="<s:property value="id" />">Edit</a></td>
 						<td><a class="btn btn-sm btn-danger deleteMenu" href="#" id="<s:property value="id" />">Delete</a></td>
@@ -131,28 +132,75 @@
   <div class="control-sidebar-bg"></div>
 </div>
 
+<div id="editMenuModalDiv"></div>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+        </div>
+		
+		<input type="hidden" id="delMenuId" value=this.id">
+		
+        <div class="modal-body">
+          <p>You are about to delete one track, this procedure is irreversible.</p>
+          <p>Do you want to proceed?</p>
+          <p class="debug-url"></p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-danger btn-ok" id="modalDeleteBtn">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/1.3.1/js/toastr.js"></script>
 <script>
 
-$(".deleteMenu").click(function() {
-	var menuId = this.id;
+$(".editMenu").click(function(){
+	var menuId=this.id;
 	$.ajax({
-		type : 'POST',
-		url : "deleteMenu.action",
-		data : {
-			menuId : menuId
-		},
-		success : function(res) {
-			toastr.success("Menu deleted successfully.", "Yay!!", {
-				"timeOut" : "3000",
-				"progressBar" : true,
-				"extendedTImeout" : "0"
-			});
-			location.reload();
-		}
+	      type: 'POST',
+	      url: "getEditMenu.action",
+	      data: {
+	    	  menuId: menuId
+	      },
+	      success: function(res) {
+	    	  $("#editMenuModalDiv").html(res);
+    		  $("#editMenuModal").modal("show");
+    		  $(".modal-backdrop").remove();
+	    }
 	});
-});
-	
+  });
+
+ $(".deleteMenu").click(function() {
+	var menuId = this.id;
+	$("#confirm-delete").modal("show");
+	$("#modalDeleteBtn").click(function(e){
+		e.preventDefault();
+		$.ajax({
+			type : 'POST',
+			url : "deleteMenu.action",
+			data : {
+				menuId : menuId
+			},
+			success : function(res) {
+				toastr.success("Menu deleted successfully.", "Yay!!", {
+					"timeOut" : "3000",
+					"progressBar" : true,
+					"extendedTImeout" : "0"
+				});
+				location.reload();
+			}
+		});
+	});
+}); 
+
 </script>
 </body>
 </html>

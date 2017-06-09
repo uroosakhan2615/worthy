@@ -22,8 +22,16 @@ public class Menu {
 	@JoinColumn(name="EVENT_ID")
 	Event event;
 	
-	@Column(name = "MENU_NAME")
-	private String name;
+	@Column(name = "Menu_NAME")
+	private String menuName;
+
+	public String getmenuName() {
+		return menuName;
+	}
+
+	public void setmenuName(String menuName) {
+		this.menuName = menuName;
+	}
 
 	public int getId() {
 		return id;
@@ -40,17 +48,4 @@ public class Menu {
 	public void setEvent(Event event) {
 		this.event = event;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	
-	
-	
-	
 }

@@ -20,14 +20,16 @@
   </div>
   <div class="login-box-body">
     <p class="login-box-msg">Sign in</p>
-	<s:property value="msg" />
+	
+	<p class="danger" style="color: red;"><s:property value="msg" /></p>
+    
     <form action="loginPost" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="userId">
+        <input type="text" class="form-control" placeholder="Username" name="userId" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="userPass">
+        <input type="password" class="form-control" placeholder="Password" name="userPass" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

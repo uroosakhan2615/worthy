@@ -37,8 +37,11 @@ public class EventAction extends ActionSupport implements SessionAware{
 	
 	public String eventList()
 	{	
+		if(session.get("userId")!=null){
 		eventList=statfulDao.findAll(Event.class);
 		return SUCCESS;
+		}
+		return ERROR;
 	}
 	
 // 	Update edited marquee

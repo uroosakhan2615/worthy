@@ -70,6 +70,10 @@
 			<result name="error" type="redirect">login</result>
 		</action>
 		
+		<action name="getEditMenu" method="getEditMenuJsp" class="com.worthy.web.MenuAction">
+			<result name="success">/editMenu.jsp</result>
+		</action>
+		
 		<action name="eventList" method="eventList" class="com.worthy.web.EventAction">
 			<result name="success">/admin/events.jsp</result>
 			<result name="error" type="redirect">login</result>
@@ -81,11 +85,23 @@
 		
 		<action name="loginPost" method="execute" class="com.worthy.web.LoginAction">
 			<result name="success" type="redirect">marqueeList</result>
-			<result name="LOGIN">/index.jsp</result>
+			<result name="LOGIN">/admin/login.jsp</result>
 		</action>
 		
 		<action name="logout" method="logout" class="com.worthy.web.LoginAction">
 			<result name="LOGOUT">/admin/login.jsp</result>
+		</action>
+		
+		<action name="addMenu" method="addMenu" class="com.worthy.web.MenuAction">
+			<result name="success" type="redirect">menuList</result>
+		</action>
+		
+		<action name="editMenu" method="editMenu" class="com.worthy.web.MenuAction">
+			<result name="success" type="redirect">menuList</result>
+		</action>
+		
+		<action name="deleteMenu" method="deleteMenu" class="com.worthy.web.MenuAction">
+			<result name="success" type="redirect">menuList</result>
 		</action>
 		
 	</package>
@@ -100,24 +116,12 @@
 			<result name="success" type="redirect">userList</result>
 		</action>
 		
-		<action name="editMenu" method="editMenu" class="com.worthy.web.UserAction">
-			<result name="success" type="redirect">userList</result>
-		</action>
-		
 		<action name="deleteUser" method="deleteUser" class="com.worthy.web.UserAction">
 			<result name="success">success.jsp</result>
 		</action>
 		
 		<action name="deleteMarquee" method="deleteMarquee" class="com.worthy.web.MarqueeAction">
 			<result name="success">success.jsp</result>
-		</action>
-		
-		<action name="deleteMenu" method="deleteMenu" class="com.worthy.web.MenuAction">
-			<result name="success">success.jsp</result>
-		</action>
-		
-		<action name="addMenu" method="addMenu" class="com.worthy.web.MenuAction">
-			<result name="success" type="redirect">menuList</result>
 		</action>
 		
 	</package>

@@ -38,7 +38,7 @@ public class Marquee {
 	private String email;
 	
 	@Column(name = "STATUS")
-	private String status;
+	private boolean status;
 	
 	public int getId() {
 		return id;
@@ -104,11 +104,11 @@ public class Marquee {
 		this.email = email;
 	}
 
-	public String getStatus() {
+	public boolean isStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(boolean status) {
 		this.status = status;
 	}
 }

@@ -104,25 +104,24 @@
 			<result name="success" type="redirect">menuList</result>
 		</action>
 		
-	</package>
-	
-	<package name="admin" namespace="/admin" extends="hibernate-default">
-		
 		<action name="editMarquee" method="editMarquee" class="com.worthy.web.MarqueeAction">
 			<result name="success" type="redirect">marqueeList</result>
-		</action>
-		
-		<action name="editUser" method="editUser" class="com.worthy.web.UserAction">
-			<result name="success" type="redirect">userList</result>
-		</action>
-		
-		<action name="deleteUser" method="deleteUser" class="com.worthy.web.UserAction">
-			<result name="success">success.jsp</result>
 		</action>
 		
 		<action name="deleteMarquee" method="deleteMarquee" class="com.worthy.web.MarqueeAction">
 			<result name="success">success.jsp</result>
 		</action>
 		
+		<action name="addEvent" method="addEvent" class="com.worthy.web.EventAction">
+			<result name="success" type="redirect">eventList</result>
+		</action>
+		
+		<action name="getEditEvent" method="getEditEventJsp" class="com.worthy.web.EventAction">
+			<result name="success">/editEvent.jsp</result>
+			<result name="error" type="redirect">login</result>
+		</action>
+		
+		
 	</package>
+
 </struts>

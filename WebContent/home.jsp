@@ -243,7 +243,7 @@
 </div>
 
 <script type="text/javascript">
- 	$('#date').datetimepicker();
+ 	$('#date').datepicker();
 </script> 
 		<footer id="footer">
 			<jsp:include page="footer.jsp"></jsp:include>

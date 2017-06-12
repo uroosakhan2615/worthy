@@ -34,7 +34,8 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		
 		if (userId != null) {
 			if(user.getPassword().equals(userPass)){
-				sessionMap.put("userId", userId);
+				sessionMap.put("userId", user.getId());
+				sessionMap.put("username", user.getUserName());
 				return SUCCESS;
 			}
 			else {

@@ -14,7 +14,6 @@ import com.worthy.dao.UserDAO;
 import com.worthy.dao.UserDAOImpl;
 import com.worthy.entity.Event;
 import com.worthy.entity.Menu;
-import com.worthy.entity.User;
 
 public class MenuAction extends ActionSupport implements SessionAware{
 

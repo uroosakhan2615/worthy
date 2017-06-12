@@ -42,7 +42,7 @@
 									<div class="col-md-8">
 										<button type="button" class="btn btn-default"
 											data-dismiss="modal">Close</button>
-										<button id="submit" name="submit" class="btn btn-success">Submit</button>
+										<button id="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Update</span></button>
 									</div>
 								</div>
 							</fieldset>

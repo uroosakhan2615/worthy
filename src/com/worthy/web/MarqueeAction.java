@@ -77,7 +77,8 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		if(session.get("userId")!=null){
 			Marquee marqueeToDelete=statfulDao.findById(Marquee.class, marqueeId);
 			if(marqueeToDelete!=null){
-				statfulDao.delete(marqueeToDelete);
+				marqueeToDelete.setStatus(false);
+				statfulDao.saveOrUpdate(marqueeToDelete);
 				return SUCCESS;
 			}
 			return ERROR;

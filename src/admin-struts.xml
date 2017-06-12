@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+<package name="admin" namespace="/admin" extends="hibernate-default">
+		
+		<action name="editUser" method="editUser" class="com.worthy.web.UserAction">
+			<result name="success" type="redirect">userList</result>
+		</action>
+		
+		<action name="deleteUser" method="deleteUser" class="com.worthy.web.UserAction">
+			<result name="success">success.jsp</result>
+		</action>
+		
+	</package>
+</struts>

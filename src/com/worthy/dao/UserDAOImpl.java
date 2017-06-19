@@ -10,6 +10,7 @@ import org.hibernate.criterion.Restrictions;
 
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
+import com.worthy.entity.Event;
 import com.worthy.entity.User;
 import com.worthy.entity.UserRoles;
 
@@ -114,5 +115,18 @@ public class UserDAOImpl implements UserDAO {
 	public List<UserRoles> getUserRolesByName(String email) {
 		return session.createQuery("From UserRoles where user.email=:email")
 				.setParameter("email", email).list();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<UserRoles> getUserRolesByUser(User user) {
+		return session.createQuery("From UserRoles where user.id=" + user.getId()).list();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Event> getUserEvents(int userId) {
+		return session.createQuery("From Event where user.id=:userId")
+				.setParameter("userId", userId).list();
 	}
 }

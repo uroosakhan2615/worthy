@@ -8,16 +8,12 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
-<jsp:include page="libIncludes.jsp"></jsp:include>
+<jsp:include page="../admin/libIncludes.jsp"></jsp:include>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
-		<jsp:include page="header.jsp"></jsp:include>
-		<!-- Left side column. contains the logo and sidebar -->
-		<jsp:include page="sidebar.jsp"></jsp:include>
-		<!-- Content Wrapper. Contains page content -->
+		<jsp:include page="userSidebar.jsp"></jsp:include>
 		<div class="content-wrapper">
-			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<div class="container">
 					<div class="row">
@@ -148,9 +144,17 @@
 												<s:else>
 													<td><a href="#" class="btn btn-sm btn-danger">Inactive</a></td>
 												</s:else>
+												
+												<s:if test="user.id==#session.userId">
 													<td><a class="btn btn-sm btn-default editEvent"
 													href="#" id="<s:property value="id" />"><span class="glyphicon glyphicon-edit"> Edit</span></a></td>
 													<td><a class="btn btn-sm btn-danger deleteEvent" href="#" id="<s:property value="id" />"><span class="glyphicon glyphicon-remove"> Delete</span></a></td>
+												</s:if>
+												<s:else>
+													<td></td>
+													<td></td>
+												</s:else>
+												
 											</tr>
 										</s:iterator>
 									</tbody>
@@ -161,7 +165,7 @@
 				</div>
 			</section>
 		</div>
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="../footer.jsp"></jsp:include>
 		<div class="control-sidebar-bg"></div>
 	</div>
 

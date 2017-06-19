@@ -76,6 +76,17 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		return ERROR;
 	}
 	
+	public String userProfile()
+	{	
+		if(session.get("userId")!=null)
+		{
+			int userId=(int) session.get("userId");
+			user=statfulDao.findById(User.class, userId);
+			return SUCCESS;
+		}
+		return ERROR;
+	}
+	
 	
 	public String searchMarqueeAction() {
 		System.out.println(searhBean.getCapacity());
@@ -156,6 +167,13 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		  }
 		  return ERROR;
 		}
+	
+	
+	public String get403() {
+		return SUCCESS;
+	}
+	
+	
 	
 	/* -------------------------------- Getter Setter ------------------------------------- */
 	

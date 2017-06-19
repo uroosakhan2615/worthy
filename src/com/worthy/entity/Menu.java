@@ -21,49 +21,24 @@ public class Menu {
 	@Column(name = "MENU_ID")
 	private int id;
 	
-	@ManyToOne
-	@JoinColumn(name="EVENT_ID")
-	Event event;
-	
 	@Column(name = "MENU_NAME")
 	private String menuName;
 	
 	@Column(name = "MENU_DESC")
 	private String description;
 	
+	@Column(name = "MENU_IMAGE_NAME")
+	private String imageName;
+	
 	@OneToMany(mappedBy="menu")
 	private List<MenuItem> menuItems;
 	
-	public String getmenuName() {
-		return menuName;
-	}
-
-	public void setmenuName(String menuName) {
-		this.menuName = menuName;
-	}
-
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public Event getEvent() {
-		return event;
-	}
-
-	public void setEvent(Event event) {
-		this.event = event;
-	}
-
-	public String getMenuName() {
-		return menuName;
-	}
-
-	public void setMenuName(String menuName) {
-		this.menuName = menuName;
 	}
 
 	public String getDescription() {
@@ -81,4 +56,21 @@ public class Menu {
 	public void setMenuItems(List<MenuItem> menuItems) {
 		this.menuItems = menuItems;
 	}
+
+	public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
+
+	public String getMenuName() {
+		return menuName;
+	}
+
+	public void setMenuName(String menuName) {
+		this.menuName = menuName;
+	}
+	
 }

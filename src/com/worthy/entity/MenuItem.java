@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "MENU_ITEM")
 public class MenuItem {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "MENU_ITEM_ID")
@@ -21,9 +20,6 @@ public class MenuItem {
 	@Column(name = "MENU_ITEM_NAME")
 	private String name;
 	
-	@Column(name = "MENU_NAME")
-	private int price;
-
 	@ManyToOne
 	@JoinColumn(name="MENU_ID")
 	Menu menu;
@@ -44,12 +40,12 @@ public class MenuItem {
 		this.name = name;
 	}
 
-	public int getPrice() {
-		return price;
+	public Menu getMenu() {
+		return menu;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setMenu(Menu menu) {
+		this.menu = menu;
 	}
-	
+
 }

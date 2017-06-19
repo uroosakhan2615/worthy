@@ -54,7 +54,20 @@
 										</select>
 									</div>
 								</div>
-
+								
+								<div class="form-group row">
+									<label class="col-md-4 control-label">Menu</label>
+									<div class="col-md-8">
+										<select class="form-control" name="event.menu.id" required>
+											<s:iterator value="menuList">
+												<option value="<s:property value='id'/>">
+													<s:property value="menuName" />
+												</option>
+											</s:iterator>
+										</select>
+									</div>
+								</div>
+								
 								<div class="form-group row">
 									<label class="col-md-4 control-label">Event Status</label>
 									<div class="col-md-8">

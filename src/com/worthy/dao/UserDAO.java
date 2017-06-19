@@ -2,6 +2,7 @@ package com.worthy.dao;
 
 import java.util.List;
 
+import com.worthy.entity.Event;
 import com.worthy.entity.Roles;
 import com.worthy.entity.User;
 import com.worthy.entity.UserRoles;
@@ -15,4 +16,7 @@ public interface UserDAO {
 	public User getUserByEmailAndPassword(String email, String pass);
 	public User findByUserName(String username);
 	public List<UserRoles> getUserRolesByName(String email);
+	public List<UserRoles> getUserRolesByUser(User user);
+	public List<Event> getUserEvents(int userId);
+	
 }

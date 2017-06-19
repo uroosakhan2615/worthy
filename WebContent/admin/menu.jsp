@@ -3,35 +3,45 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 2 | Data Tables</title>
-<!-- Tell the Marquees_ name to be responsive to screen width -->
+<title>Menus</title>
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
 <jsp:include page="libIncludes.jsp"></jsp:include>
-<style type="text/css">
-        * {
-  .border-radius(0) !important;
+
+<style>
+
+.fa.fa-edit {
+	color: #b1b1b1;
 }
 
-#field {
-    margin-bottom:20px;
+.fa.fa-edit:hover {
+	color: #018971;
 }
-    </style>
+
+.fa.fa-remove {
+	color: #b1b1b1;
+}
+
+.fa.fa-remove:hover {
+	color: red;
+}
+
+.img-thumbnail.img-responsive.img-circle {
+	width: 150px;
+	height: 150px;
+}
+
+</style>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
-		<!-- Left side column. contains the logo and sidebar -->
 		<jsp:include page="sidebar.jsp"></jsp:include>
-		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
-			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<div class="container">
-					<!-- Trigger the modal with a button -->
 					<div class="row">
 						<button type="button" class="btn btn-info" data-toggle="modal"
 							data-target="#myModal">Add Menu</button>
@@ -46,50 +56,58 @@
 								<div class="modal-body">
 									<div class="container">
 										<div class="row">
-											<form class="form-horizontal" method="post" action="addMenu">
+											<form class="form-horizontal" method="post" action="addMenu" enctype="multipart/form-data">
 												<fieldset>
 
 													<div class="form-group">
 														<label class="col-md-2 control-label" for="Name">Menu
 															Name</label>
 														<div class="col-md-4">
-															<input id="Name" name="menu.menuName" type="text"
+															<input name="menu.menuName" type="text"
 																placeholder="Enter Menu Name"
 																class="form-control input-md" required>
 														</div>
 													</div>
-
+													
 													<div class="form-group">
-														<label class="col-md-2 control-label" for="address">Event
+														<label class="col-md-2 control-label" for="Name">Menu
 															Name</label>
 														<div class="col-md-4">
-															<select class="form-control" name="menu.event.id"
-																required>
-																<s:iterator value="eventList">
-																	<option value="<s:property value="id" />"><s:property
-																			value="eventName" /></option>
-																</s:iterator>
-															</select>
+															<textarea name="menu.description"
+																placeholder="Enter Menu Description"
+																class="form-control input-md" required></textarea>
 														</div>
 													</div>
- <div class="container">
-	<div class="row">
-	
-		<input type="hidden" name="count" value="1" />
-        <div class="control-group" id="fields">
-            <label class="control-label" for="field1">Menu List</label>
-            <div class="controls" id="profs"> 
-                <form class="input-append">
-                    <div id="field" class="col-md-4"><input autocomplete="off" class="input" id="field1" name="menuList[]" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
-                </form>
-            
-            <small>Press + to add another form menu </small>
-            </div>
-        </div>
-	</div>
-</div>
+													
+													<div class="form-group">
+														<label class="col-md-2 control-label" for="Name">Upload Image</label>
+														<div class="col-md-4">
+															<input name="menuImage" type="file" required>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<label class="col-md-2 control-label" for="field1">Add
+															Menu Items</label>
+														<div class="controls col-md-4">
+															<div class="entry">
+																<div class="form-group">
+																	<input class="form-control" name="menu.menuItems.name"
+																		type="text" placeholder="Menu Item Name" />
 
-
+																	<div class="form-group col-md-4">
+																		<span class="input-group-btn">
+																			<button class="btn btn-success btn-add" type="button">
+																				<span class="glyphicon glyphicon-plus"></span>Add
+																				New Menu Item
+																			</button>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															<br>
+														</div>
+													</div>
 
 													<div class="form-group row">
 														<label class="col-md-4 control-label" for="submit"></label>
@@ -118,68 +136,66 @@
 					<div class="col-xs-12">
 						<div class="box">
 							<div class="box-header">
-								<h3 class="box-title">Menus</h3>
 							</div>
-							<!-- /.box-header -->
-							<div class="box-body">
-								<table id="menuTable" class="table table-bordered table-hover">
-									<thead>
-										<tr>
-											<th>Menu Name</th>
-											<th>Event Name</th>
-											<th>Edit</th>
-											<th>Delete</th>
-										</tr>
-									</thead>
-									<tbody>
-										<s:iterator value="menuList" status="varStatus">
-											<tr>
-												<td><s:property value="menuName" /></td>
-												<td><s:property value="event.eventName" /></td>
-												<td><a class="btn btn-sm btn-default editMenu" href="#"
-													id="<s:property value="id" />"><span class="glyphicon glyphicon-edit"> Edit</span></a></td>
-												<td><a class="btn btn-sm btn-danger deleteMenu"
-													href="#" id="<s:property value="id" />"><span class="glyphicon glyphicon-remove"> Delete</span></a></td>
- 										</tr>
-										</s:iterator>
-									</tbody>
-								</table>
-								
-								<s:iterator value="menuList" status="varStatus">
-									<div class="col-md-4">
-										<div class="thumbnail" style="padding: 0">
-											<div style="padding: 4px">
-												<img alt="300x200" style="width: 100%"
-													src="http://placehold.it/200x150">
+							
+							<div class="col-md-12">
+					            <input type="search" class="form-control" id="input-search" placeholder="Search..." >
+					        </div>
+					        <br><br>
+							
+							<div class="box-body searchable-container">
+							<s:iterator value="menuList" var="menu" status="varStatus">
+								<div class="col-md-4 items">
+									<div class="panel panel-info">
+										<div class="panel-body">
+												<div class="panel-header pull-right">
+													<a href="#" class="editMenu" id="<s:property value="id" />"><span class="fa fa-edit"></span></a>&nbsp;
+													<a href="#" class="deleteMenu" id="<s:property value="id" />"><span class="fa fa-remove"></span></a>
+												</div>
+												<br>
+												<div class="text-center">
+													<img src="<s:property value="imageName" />" class="img-thumbnail img-responsive img-circle">
+												</div>
 											</div>
-											<div class="caption">
-												<h2>
+										<br>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<h3 class="text-center">
 													<s:property value="menuName" />
-												</h2>
-												<p>
+												</h3>
+												<p class="text-center">
 													<s:property value="description" />
 												</p>
+												<hr>
+												<h4 class="text-center">
+													Menu Items
+												</h4>
+												<s:iterator value="menuItems" var="menuItem">
+													<hr>
+													<h4>
+														<s:property value="name" />
+													</h4>
+												</s:iterator>
+												<br>
 											</div>
-											<div class="modal-footer" style="text-align: left">
-												<div class="progress progress-striped active"
-													style="background: #ddd">
-													<div class="bar" style="width: 60%;"></div>
-												</div>
-												<div class="row-fluid"></div>
-											</div>
+											<div class="col-md-1"></div>
 										</div>
+										<!--/row-->
 									</div>
-								</s:iterator>
-							</div>
+								</div>
+							</s:iterator>
 						</div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
+	</div>
+		
 		<jsp:include page="footer.jsp"></jsp:include>
 		<div class="control-sidebar-bg"></div>
+		
 	</div>
-
+	
 	<div id="editMenuModalDiv"></div>
 
 	<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog"
@@ -194,8 +210,7 @@
 				</div>
 
 				<div class="modal-body">
-					<p>You are about to delete one track, this procedure is
-						irreversible.</p>
+					<p>You are about to delete one Menu, this cannot be undone.</p>
 					<p>Do you want to proceed?</p>
 					<p class="debug-url"></p>
 				</div>
@@ -207,9 +222,8 @@
 			</div>
 		</div>
 	</div>
+	
 <script>
-
-//$('#menuTable').dataTable();
 
 $(".editMenu").click(function(){
 	var menuId=this.id;
@@ -222,7 +236,7 @@ $(".editMenu").click(function(){
 	      success: function(res) {
 	    	  $("#editMenuModalDiv").html(res);
     		  $("#editMenuModal").modal("show");
-    		  $(".modal-backdrop").remove();
+    		  //$(".modal-backdrop").remove();
 	    }
 	});
   });
@@ -250,34 +264,33 @@ $(".editMenu").click(function(){
 	});
 }); 
 
- $(document).ready(function(){
-	    var next = 1;
-	    $(".add-more").click(function(e){
-	        e.preventDefault();
-	        var addto = "#field" + next;
-	        var addRemove = "#field" + (next);
-	        next = next + 1;
-	        var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
-	        var newInput = $(newIn);
-	        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
-	        var removeButton = $(removeBtn);
-	        $(addto).after(newInput);
-	        $(addRemove).after(removeButton);
-	        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
-	        $("#count").val(next);  
-	        
-	            $('.remove-me').click(function(e){
-	                e.preventDefault();
-	                var fieldNum = this.id.charAt(this.id.length-1);
-	                var fieldID = "#field" + fieldNum;
-	                $(this).remove();
-	                $(fieldID).remove();
-	            });
+   
+   $(document).on('click', '.btn-add', function(e)
+	     {
+	         e.preventDefault();
+	         var controlForm = $('.controls div:first'),
+	             currentEntry = $(this).parents('.entry:first'),
+	             newEntry = $(currentEntry.clone()).appendTo(controlForm);
+	         newEntry.find('input').val('');
+	         controlForm.find('.entry:not(:last) .btn-add')
+	             .removeClass('btn-add').addClass('btn-remove')
+	             .removeClass('btn-success').addClass('btn-danger')
+	             .html('<span class="glyphicon glyphicon-minus"></span>');
+	     }).on('click', '.btn-remove', function(e)
+	     {
+	 		$(this).parents('.entry:first').remove();
+	 		e.preventDefault();
+	 		return false;
+	 	});
+   
+   $('#input-search').on('keyup', function() {
+	      var rex = new RegExp($(this).val(), 'i');
+	        $('.searchable-container .items').hide();
+	        $('.searchable-container .items').filter(function() {
+	            return rex.test($(this).text());
+	        }).show();
 	    });
-	    
-
-	    
-	});
+   
 
 </script>
 </body>

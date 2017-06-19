@@ -32,6 +32,10 @@ public class Event {
 	@JoinColumn(name="MARQUEE_ID")
 	Marquee marquee;
 	
+	@ManyToOne
+	@JoinColumn(name="MENU_ID")
+	Menu menu;
+	
 	public int getId() {
 		return id;
 	}
@@ -71,4 +75,13 @@ public class Event {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public Menu getMenu() {
+		return menu;
+	}
+
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
+	
 }

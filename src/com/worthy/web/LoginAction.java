@@ -1,5 +1,6 @@
 package com.worthy.web;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -11,6 +12,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 import com.worthy.dao.UserDAOImpl;
 import com.worthy.entity.User;
+import com.worthy.entity.UserRoles;
 
 public class LoginAction extends ActionSupport implements SessionAware {
 
@@ -29,14 +31,28 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	@Override
 	public String execute() throws Exception {
 		HttpSession session = ServletActionContext.getRequest().getSession(true);
-		
+		String response="";
 		User user=userDao.findByUserName(userId);
 		
 		if (userId != null) {
 			if(user.getPassword().equals(userPass)){
 				sessionMap.put("userId", user.getId());
 				sessionMap.put("username", user.getUserName());
-				return SUCCESS;
+				List<UserRoles> userRoles=userDao.getUserRolesByUser(user);
+				
+				for(UserRoles obj: userRoles){
+					if(obj.getRoles().getRoleName().equalsIgnoreCase(("admin"))){
+						response="ADMIN";
+						break;
+					}
+					
+					if(obj.getRoles().getRoleName().equalsIgnoreCase(("user"))){
+						response="USER";
+						break;
+					}
+				}
+				
+				return response;
 			}
 			else {
 				msg = "Invalid Password";

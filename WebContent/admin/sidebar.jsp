@@ -56,6 +56,12 @@
             <i class="fa fa-th"></i> <span>Event Management</span>            
           </a>
         </li>
+         <li>
+          <a href="profile">
+            <i class="fa fa-th"></i> <span>Profile</span>            
+          </a>
+        </li>
+        
                                             	       
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>

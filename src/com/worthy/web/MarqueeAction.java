@@ -86,6 +86,18 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		return SUCCESS;
 	}
 
+	
+	//TODO: get all marquess of current user
+	public String userMarquees()
+	{	
+		if(session.get("userId")!=null){
+			marqueeList=statfulDao.findAll(Marquee.class);
+			return SUCCESS;
+		}
+		return ERROR;
+	}
+	
+	
 /* -------------------------------- Getter Setter ------------------------------------- */
 
 	public Marquee getMarquee() {

@@ -1,5 +1,7 @@
 package com.worthy.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,8 +23,17 @@ public class Event {
 	@Column(name = "EVENT_NAME")
 	private String eventName;
 	
-	@Column(name = "STATUS")
-	private String status;
+	@Column(name = "EVENT_STATUS")
+	private Boolean status;
+	
+	@Column(name = "EVENT_DESCRIPTION")
+	private String description;
+	
+	@Column(name = "START_DATE")
+	private Date startDate;
+	
+	@Column(name = "END_DATE")
+	private Date endDate;
 	
 	@ManyToOne
 	@JoinColumn(name="USER_ID")
@@ -68,20 +79,44 @@ public class Event {
 		this.eventName = eventName;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public Menu getMenu() {
 		return menu;
 	}
 
 	public void setMenu(Menu menu) {
 		this.menu = menu;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
 	}
 	
 }

@@ -225,6 +225,10 @@
 	
 <script>
 
+$("body").mCustomScrollbar({
+	theme:"inset-2-dark"
+});
+
 $(".editMenu").click(function(){
 	var menuId=this.id;
 	$.ajax({

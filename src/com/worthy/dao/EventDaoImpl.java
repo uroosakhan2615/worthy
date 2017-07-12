@@ -10,9 +10,10 @@ import org.hibernate.criterion.Restrictions;
 
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
+import com.worthy.entity.Event;
 import com.worthy.entity.Marquee;
 
-public class MarqueeDaoImpl implements MarqueeDao {
+public class EventDaoImpl implements EventDao {
 	
 	@SessionTarget
 	Session session;
@@ -20,11 +21,10 @@ public class MarqueeDaoImpl implements MarqueeDao {
 	@TransactionTarget
 	Transaction transaction;
 
-	//TODO: to be decided
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Marquee> getMarqueesByCity(int cityId) {
-		return session.createQuery("From Marquee where city.id=:cityId").setParameter("cityId", cityId).list();
+	public List<Event> getActiveEvents() {
+		return session.createQuery("From Event where status=true").list();
 	}
 
 }

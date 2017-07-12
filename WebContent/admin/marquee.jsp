@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 2 | Data Tables</title>
+<title>Marquee Management</title>
 <!-- Tell the Marquees_ name to be responsive to screen width -->
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -19,13 +19,6 @@
 		<div class="content-wrapper">
 			<section class="content-header">
 				<div class="container">
-					
-					<div class="row">
-					<button type="button" class="btn btn-info" id="createMarqueeBtn"
-						data-toggle="modal" data-target="#createMarquee">Register
-						Marquee</button>
-						</div>
-
 					<div class="modal" id="createMarquee" role="dialog">
 						<div class="modal-dialog">
 							<!-- Modal content-->
@@ -67,7 +60,18 @@
 																placeholder="Enter Address..."></textarea>
 														</div>
 													</div>
-
+													
+													<div class="form-group row">
+														<label class="col-md-4 control-label">City</label>
+														<div class="col-md-8">
+															<select name="marquee.city.name" class="form-control">
+																<s:iterator value="cities">
+																	<option value="<s:property value="name" />"><s:property value="name" /></option>
+																</s:iterator>
+															</select>
+														</div>
+													</div>
+													
 													<div class="form-group row">
 														<label class="col-md-4 control-label" for="marqueeContact">Mobile
 															Number</label>
@@ -110,7 +114,11 @@
 			</section>
 			<section class="content">
 				<div class="row">
+					
 					<div class="col-xs-12">
+						<button type="button" class="btn btn-info" id="createMarqueeBtn"
+						data-toggle="modal" data-target="#createMarquee">Register Marquee</button>
+						
 						<div class="box">
 							<div class="box-header">
 								<h3 class="box-title">Customer Data</h3>
@@ -181,54 +189,59 @@
 	</div>
 	
 	<script>
-		$('#marqueeListTable').dataTable();
+		
+	$(".body").mCustomScrollbar({
+		theme:"inset-2-dark"
+	});
 
-		$(".editMarquee").click(function() {
-			var marqueeId = this.id;
+	$('#marqueeListTable').dataTable();
+
+	$(".editMarquee").click(function() {
+		var marqueeId = this.id;
+		$.ajax({
+			type : 'POST',
+			url : "getEditMarquee.action",
+			data : {
+				marqueeId : marqueeId
+			},
+			success : function(res) {
+				$("#editMarqueeModalDiv").html(res);
+				$("#editMarqueeModal").modal("show");
+				$(".modal-backdrop").remove();
+			}
+		});
+	});
+
+	$(".deleteMarquee").click(function() {
+		var marqueeId = this.id;
+		
+		$("#confirm-delete").modal("show");
+		$("#modalDeleteBtn").click(function(e){
+			e.preventDefault();
+			
 			$.ajax({
 				type : 'POST',
-				url : "getEditMarquee.action",
+				url : "deleteMarquee.action",
 				data : {
 					marqueeId : marqueeId
 				},
 				success : function(res) {
-					$("#editMarqueeModalDiv").html(res);
-					$("#editMarqueeModal").modal("show");
-					$(".modal-backdrop").remove();
+					//alert(res);
+					//$("#responseMessageDiv").html(res);
+					/*
+					toastr.success("Marquee deleted successfully.", "Yay!!", {
+						"timeOut" : "3000",
+						"progressBar" : true,
+						"extendedTImeout" : "0"
+					});
+					*/
+					location.reload();
+					//$("#deleteMarqueeModal").modal("show");
+					//  $(".modal-backdrop").removeClass("in");
 				}
 			});
 		});
-
-		$(".deleteMarquee").click(function() {
-			var marqueeId = this.id;
-			
-			$("#confirm-delete").modal("show");
-			$("#modalDeleteBtn").click(function(e){
-				e.preventDefault();
-				
-				$.ajax({
-					type : 'POST',
-					url : "deleteMarquee.action",
-					data : {
-						marqueeId : marqueeId
-					},
-					success : function(res) {
-						//alert(res);
-						//$("#responseMessageDiv").html(res);
-						/*
-						toastr.success("Marquee deleted successfully.", "Yay!!", {
-							"timeOut" : "3000",
-							"progressBar" : true,
-							"extendedTImeout" : "0"
-						});
-						*/
-						location.reload();
-						//$("#deleteMarqueeModal").modal("show");
-						//  $(".modal-backdrop").removeClass("in");
-					}
-				});
-			});
-		});
+	});
 	</script>
 </body>
 </html>

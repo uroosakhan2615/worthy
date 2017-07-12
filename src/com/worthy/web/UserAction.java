@@ -18,7 +18,9 @@ import com.worthy.dao.StatefulDaoSupport;
 import com.worthy.dao.StatefulDaoSupportImpl;
 import com.worthy.dao.UserDAO;
 import com.worthy.dao.UserDAOImpl;
+import com.worthy.entity.City;
 import com.worthy.entity.User;
+import com.worthy.entity.UserRoles;
 
 public class UserAction extends ActionSupport implements ModelDriven<User>, SessionAware {
 
@@ -28,6 +30,8 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 	private List<User> userList = new ArrayList<User>();
 	private UserDAO userDAO = new UserDAOImpl();
 	private StatefulDaoSupport statfulDao = new StatefulDaoSupportImpl();
+	private UserDAOImpl userDao = new UserDAOImpl();
+	private List<City> cities;
 	private User editUser;
 	private SearchBean searhBean;
 	private String msg;
@@ -44,7 +48,6 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 	public void setSession(Map<String, Object> map) {
 		session = (SessionMap<String, Object>) map;
 	}
-	
 	
 	public User getModel() {
 		return user;
@@ -64,7 +67,6 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 	{	
 		return SUCCESS;
 	}
-	
 	
 	public String login()
 	{	
@@ -86,7 +88,6 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		}
 		return ERROR;
 	}
-	
 	
 	public String searchMarqueeAction() {
 		System.out.println(searhBean.getCapacity());
@@ -112,8 +113,13 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 	public String list()
 	{
 		if(session.get("userId")!=null){
-		userList = statfulDao.findAll(User.class);
-		return SUCCESS;
+			int userId=(int) session.get("userId");
+			if(isUserAuthrized(userId)){
+				userList = statfulDao.findAll(User.class);
+				return SUCCESS;
+			}else {
+				return Constants.UNAUTH;
+			}
 		}
 		return ERROR;
 	}
@@ -125,10 +131,6 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		return SUCCESS;
 	}
 	
-	/**
-	 * To delete a user.
-	 * @return String
-	 */
 	public String delete()
 	{
 		HttpServletRequest request = (HttpServletRequest) ActionContext.getContext().get(ServletActionContext.HTTP_REQUEST);
@@ -173,7 +175,23 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 		return SUCCESS;
 	}
 	
+	public boolean isUserAuthrized(int userId){
+		User user=statfulDao.findById(User.class, userId);
+		boolean status=false;
+		List<UserRoles> userRoles=userDao.getUserRolesByUser(user);
+		for(UserRoles obj: userRoles){
+			if(obj.getRoles().getRoleName().equalsIgnoreCase(("admin"))){
+				status=true;
+				break;
+			}
+		}
+		return status;
+	}
 	
+	public String getHome(){
+		cities=statfulDao.findAll(City.class);
+		return SUCCESS;
+	}
 	
 	/* -------------------------------- Getter Setter ------------------------------------- */
 	
@@ -271,6 +289,16 @@ public class UserAction extends ActionSupport implements ModelDriven<User>, Sess
 
 	public void setUserId(int userId) {
 		this.userId = userId;
+	}
+
+
+	public List<City> getCities() {
+		return cities;
+	}
+
+
+	public void setCities(List<City> cities) {
+		this.cities = cities;
 	}
 	
 }

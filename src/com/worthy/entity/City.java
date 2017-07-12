@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 	@Entity
 	@Table(name = "CITY")
-	public class city {
+	public class City {
 
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +20,7 @@ import javax.persistence.Table;
 		private String name;
 		
 		@Column(name = "CITY_DESCRIPTION")
-		private int description;
+		private String description;
 
 		public int getId() {
 			return id;
@@ -38,13 +38,12 @@ import javax.persistence.Table;
 			this.name = name;
 		}
 
-		public int getDescription() {
+		public String getDescription() {
 			return description;
 		}
 
-		public void setDescription(int description) {
+		public void setDescription(String description) {
 			this.description = description;
 		}
-		
-          }
+}
 	

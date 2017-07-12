@@ -43,7 +43,18 @@
 											name="marquee.marqueeAddress" placeholder="Enter Address...">${editMarquee.marqueeAddress}</textarea>
 									</div>
 								</div>
-
+								
+								<div class="form-group row">
+										<label class="col-md-4 control-label">City</label>
+										<div class="col-md-8">
+											<select name="marquee.city.id" class="form-control">
+												<s:iterator value="cities">
+													<option value="<s:property value="id" />"><s:property value="name" /></option>
+												</s:iterator>
+											</select>
+										</div>
+									</div>
+								
 								<!-- Text input-->
 								<div class="form-group row">
 									<label class="col-md-4 control-label" for="marqueeContact">Mobile

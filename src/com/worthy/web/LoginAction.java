@@ -18,7 +18,6 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 	private static final long serialVersionUID = -3434561352924343132L;
 
-	// Generate getters and setters....
 	private String userId, userPass, msg;
 	private SessionMap<String, Object> sessionMap;
 	private UserDAOImpl userDao = new UserDAOImpl();
@@ -42,33 +41,28 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				
 				for(UserRoles obj: userRoles){
 					if(obj.getRoles().getRoleName().equalsIgnoreCase(("admin"))){
-						response="ADMIN";
+						response=Constants.ADMIN;
 						break;
 					}
 					
 					if(obj.getRoles().getRoleName().equalsIgnoreCase(("user"))){
-						response="USER";
+						response=Constants.USER;
 						break;
 					}
 				}
-				
 				return response;
 			}
 			else {
-				msg = "Invalid Password";
-				return "LOGIN";
+				msg = Constants.INVALID_PASS;
+				return Constants.LOGIN;
 			}
 		} else {
 
 			String getSessionAttr = (String) session.getAttribute("userId");
-			System.out.println("AAAAA "+getSessionAttr);
-
 			if (getSessionAttr != null) {
-
-				return "SUCCESS";
-
+				return SUCCESS;
 			} else {
-				return "LOGIN";
+				return Constants.LOGIN;
 			}
 		}
 	}
@@ -76,9 +70,10 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public String logout() {
 		
 		sessionMap.remove("userId");
+		sessionMap.remove("username");
 		sessionMap.invalidate();
 		
-		return "LOGOUT";
+		return Constants.LOGOUT;
 	}
 
 	public SessionMap<String, Object> getSessionMap() {

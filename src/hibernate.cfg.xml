@@ -23,8 +23,8 @@
 	<mapping class="com.worthy.entity.Menu" />
 	<mapping class="com.worthy.entity.MenuItem" />
 	<mapping class="com.worthy.entity.Hall" />
-	<mapping class="com.worthy.entity.city" />
+	<mapping class="com.worthy.entity.City" />
 	<mapping class="com.worthy.entity.Profile" />
-        
+    <mapping class="com.worthy.entity.Booking" />
 </session-factory>
 </hibernate-configuration>

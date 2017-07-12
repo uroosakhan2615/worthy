@@ -17,11 +17,19 @@
 <link rel="stylesheet" href="admin/plugins/daterangepicker/daterangepicker.css">
 <link rel="stylesheet" href="admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <link rel="stylesheet" href="admin/plugins/timepicker/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="admin/plugins/pace/pace.min.css">
+<link rel="stylesheet" href="admin/css/jquery.mCustomScrollbar.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>   
+<script src="admin/plugins/daterangepicker/moment.min.js"></script> 
 <script src="admin/js/jquery.min.js"></script>
 <script src="admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="admin/plugins/datatables/dataTables.bootstrap.js"></script>
 <script src="admin/js/jquery.dataTables.min.js"></script>
 <script src="admin/plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="admin/js/toastr.js"></script>
+<script src="admin/plugins/pace/pace.min.js"></script>
+<script src="admin/js/jquery.mCustomScrollbar.js"></script>
+<script src="admin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	$(document).ajaxStart(function() { Pace.restart(); });
+</script>

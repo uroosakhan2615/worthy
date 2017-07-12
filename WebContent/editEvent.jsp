@@ -23,9 +23,16 @@
 								<div class="form-group row">
 									<label class="col-md-4 control-label">Event name</label>
 									<div class="col-md-8">
-										<input id="marqueeName" name="marquee.marqueeName" type="text"
+										<input id="marqueeName" name="event.eventName" type="text"
 											placeholder="Marquee Name" class="form-control input-md" value="${editEvent.eventName}"
 											required>
+									</div>
+								</div>
+								
+								<div class="form-group row">
+									<label class="col-md-4 control-label">Event Description</label>
+									<div class="col-md-8">
+										<textarea name="event.description" class="form-control input-md">${editEvent.description}</textarea>
 									</div>
 								</div>
 								
@@ -72,12 +79,30 @@
 									<label class="col-md-4 control-label">Event Status</label>
 									<div class="col-md-8">
 										<select class="form-control" name="event.status" required>
-											<option value="1">Active</option>
-											<option value="0">DeActive</option>
+											<option value="true">Active</option>
+											<option value="false">DeActive</option>
 										</select>
 									</div>
 								</div>
-
+								
+								<div class="form-group row">
+									<label class="col-md-4 control-label">Start Date</label>
+									<div class="col-md-8">
+										<input id="editStartDate" name="startDateStr" type="text"
+											placeholder="Start Date" class="form-control input-md" value="<s:date name="editEvent.startDate" format="dd/MM/yyyy" />"
+											required>
+									</div>
+								</div>
+								
+								<div class="form-group row">
+									<label class="col-md-4 control-label">End Date</label>
+									<div class="col-md-8">
+										<input id="editEndDate" name="endDateStr" type="text"
+											placeholder="End Date" class="form-control input-md" value="<s:date name="editEvent.endDate" format="dd/MM/yyyy" />"
+											required>
+									</div>
+								</div>
+								
 								<div class="form-group row">
 									<label class="col-md-4 control-label" for="submit"></label>
 									<div class="col-md-8">
@@ -94,3 +119,12 @@
 		</s:form>
 	</div>
 </div>
+
+
+<script>
+$('#editStartDate, #editEndDate').datepicker({
+	format: 'dd/mm/yyyy',
+	todayHighlight: true,
+	autoclose: true
+});
+</script>

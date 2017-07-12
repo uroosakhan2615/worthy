@@ -716,3 +716,282 @@ textarea {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
+
+
+
+
+
+//event style code
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Just another WordPress site" />
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="http://wordpress.templaza.net/everline/wp-content/themes/everline/js/html5shiv.js"></script>
+    <script src="http://wordpress.templaza.net/everline/wp-content/themes/everline/js/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+<title>Events for June 2017 &#8211; Everline</title>
+<style>
+.wishlist_table .add_to_cart,a.add_to_wishlist.button.alt {
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+}
+</style>
+<script type="text/javascript">
+				var yith_wcwl_plugin_ajax_web_url = '/everline/wp-admin/admin-ajax.php';
+			</script>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml"
+	title="Everline &raquo; Feed"
+	href="http://wordpress.templaza.net/everline/feed/" />
+<link rel="alternate" type="application/rss+xml"
+	title="Everline &raquo; Comments Feed"
+	href="http://wordpress.templaza.net/everline/comments/feed/" />
+<link rel="alternate" type="text/calendar"
+	title="Everline &raquo; iCal Feed"
+	href="http://wordpress.templaza.net/everline/events/?ical=1" />
+<link rel="alternate" type="application/rss+xml"
+	title="Everline &raquo; Events Feed"
+	href="http://wordpress.templaza.net/everline/events/feed/" />
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wordpress.templaza.net\/everline\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tribe-events-bootstrap-datepicker-css-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/vendor/bootstrap-datepicker/css/datepicker.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.7'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.1'
+	type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+.tp-caption a {
+	color: #ff7302;
+	text-shadow: none;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out
+}
+
+.tp-caption a:hover {
+	color: #ffa902
+}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css'
+	href='//wordpress.templaza.net/everline/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.6.14'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'
+	href='//wordpress.templaza.net/everline/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.6.14'
+	type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'
+	href='//wordpress.templaza.net/everline/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.6.14'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-custom-jquery-styles-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/vendor/jquery/smoothness/jquery-ui-1.8.23.custom.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-full-calendar-style-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-full.min.css?ver=4.4.4'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-style-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-theme.min.css?ver=4.4.4'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-full-mobile-style-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-full-mobile.min.css?ver=4.4.4'
+	type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='tribe-events-calendar-mobile-style-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/css/tribe-events-theme-mobile.min.css?ver=4.4.4'
+	type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'
+	href='//wordpress.templaza.net/everline/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css?ver=3.1.6'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-selectBox-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1.2.0'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-main-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style.css?ver=2.0.16'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcwl-font-awesome-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome.min.css?ver=4.3.0'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/css/bootstrap.min.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='awesome-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/fonts/css/font-awesome.min.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='Varela-css'
+	href='http://fonts.googleapis.com/css?family=Varela&#038;ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='Rouge-css'
+	href='http://fonts.googleapis.com/css?family=Rouge+Script&#038;ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='owl.carousel-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/css//owl.carousel.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='owl.theme-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/css//owl.theme.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'
+	href='http://wordpress.templaza.net/everline/wp-content/plugins/js_composer/assets/lib/bower/flexslider/flexslider.min.css?ver=5.1'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/style.css?ver=4.7.5'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='custom-gwolle-css'
+	href='http://wordpress.templaza.net/everline/wp-content/themes/everline/css//custom-gwolle.css?ver=4.7.5'
+	type='text/css' media='all' />
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tribe_bootstrap_datepicker_strings = {"dates":{"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"daysShort":{"Jan":"Jan","Feb":"Feb","Mar":"Mar","Apr":"Apr","May":"May","Jun":"Jun","Jul":"Jul","Aug":"Aug","Sep":"Sep","Oct":"Oct","Nov":"Nov","Dec":"Dec"},"daysMin":["S","M","T","W","T","F","S"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"clear":"Clear","today":"Today"}};
+/* ]]> */
+</script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js?ver=3.2'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/vendor/jquery-placeholder/jquery.placeholder.min.js?ver=2.0.7'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/vendor/jquery-resize/jquery.ba-resize.min.js?ver=1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tribe_js_config = {"permalink_settings":"\/%postname%\/","events_post_type":"tribe_events","events_base":"http:\/\/wordpress.templaza.net\/everline\/events\/"};
+/* ]]> */
+</script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/js/tribe-events.min.js?ver=4.4.4'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/the-events-calendar/src/resources/js/tribe-events-bar.min.js?ver=4.4.4'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.1'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/everline\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/everline\/events\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View Cart","cart_url":"http:\/\/wordpress.templaza.net\/everline\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript'
+	src='//wordpress.templaza.net/everline/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=2.6.14'></script>
+<script type='text/javascript'
+	src='http://wordpress.templaza.net/everline/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=5.1'></script>
+<link rel='https://api.w.org/'
+	href='http://wordpress.templaza.net/everline/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD"
+	href="http://wordpress.templaza.net/everline/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+	href="http://wordpress.templaza.net/everline/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.7.5" />
+<meta name="generator" content="WooCommerce 2.6.14" />
+<script type="text/javascript">
+        var imgpath = "http://wordpress.templaza.net/everline/wp-content/plugins/tz-plus-gallery/";
+    </script>
+<style type="text/css">
+
+<jsp:include page="styles.jsp"></jsp:include>
+<jsp:include page="admin/libIncludes.jsp"></jsp:include>
+body#bd {
+	background: #f5f5f5;
+}
+
+.wpb_revslider_element {
+	margin-bottom: 0;
+}
+
+body#bd {
+	overflow-x: hidden;
+}
+
+@media screen and (max-width:768px) {
+	div.nocontainer {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width:991px) {
+}
+
+.wpb_gmaps_widget.wpb_content_element {
+	margin-bottom: 0;
+}
+
+.cart-collaterals .tzcollaterals_left form.woocommerce-shipping-calculator .shipping-calculator-form p
+	{
+	margin: 0;
+}
+
+.cart-collaterals .tzcollaterals_left form.woocommerce-shipping-calculator .shipping-calculator-form p select
+	{
+	line-height: 42px;
+	height: 42px;
+}
+
+.cart-collaterals .tzcollaterals_left form.woocommerce-shipping-calculator .shipping-calculator-form p input
+	{
+	line-height: 43px;
+	background: transparent;
+	border-bottom: 1px solid #f8f8f8;
+}
+
+.cart-collaterals .tzcollaterals_left form.woocommerce-shipping-calculator .shipping-calculator-form p button
+	{
+	margin: 18px 0;
+}
+
+#calc_shipping_country {
+	padding: 0 10px;
+}
+</style>
+
+
+<script type="text/javascript">
+        var themeprefix = 'plazart';
+        var imgpath_theme = 'http://wordpress.templaza.net/everline/wp-content/themes/everline/images/';
+    </script>
+<style type="text/css">
+.recentcomments a {
+	display: inline !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+</style>
+<meta name="generator"
+	content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://wordpress.templaza.net/everline/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+<meta name="robots" content="noindex,follow" />
+<script type="application/ld+json">
+[{"@context":"http://schema.org","@type":"Event","name":"Porta quis tortor","description":"&lt;p&gt;Jane &amp; Cody Wedding Ceremory There are many variations&lt;/p&gt;\\n","image":"http://wordpress.templaza.net/everline/wp-content/uploads/2015/02/event4.jpg","url":"http://wordpress.templaza.net/everline/event/porta-quis-tortor/","startDate":"2016-03-21 08:00:00","endDate":"2017-06-01 17:00:00","location":{"@type":"Place","name":"London","description":"&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \\'Content here, content here\\', making it &lt;/p&gt;\\n","url":"http://wordpress.templaza.net/everline/venue/london/","address":{"streetAddress":" London, UK, 10, Friks Avenue ","addressLocality":"TemPlaza","addressRegion":"TN","postalCode":"091 ","addressCountry":"United States"},"telephone":"+0987 092 291 091 ","sameAs":"http://www.templaza.com/"},"organizer":{"@type":"Person","name":"Templaza","description":"&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \\'Content here, content here\\', making it &lt;/p&gt;\\n","url":"http://wordpress.templaza.net/everline/organizer/templaza/","telephone":"+0987 092 291 091 ","email":"te&#109;&#112;&#108;aza&#64;i&#110;f&#111;&#46;&#99;&#111;&#109;","sameAs":"http://TemPlaza"},"offers":{"@type":"Offer","price":"900","url":"http://wordpress.templaza.net/everline/event/porta-quis-tortor/"}}]
+</script>
+<meta name="generator"
+	content="Powered by Slider Revolution 5.4.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<noscript>
+	<style type="text/css">
+.wpb_animate_when_almost_visible {
+	opacity: 1;
+}
+</style>

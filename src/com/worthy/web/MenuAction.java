@@ -2,34 +2,29 @@ package com.worthy.web;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
-
 import com.opensymphony.xwork2.ActionSupport;
 import com.worthy.dao.StatefulDaoSupport;
 import com.worthy.dao.StatefulDaoSupportImpl;
-import com.worthy.dao.UserDAO;
 import com.worthy.dao.UserDAOImpl;
 import com.worthy.entity.Event;
 import com.worthy.entity.Menu;
 import com.worthy.entity.MenuItem;
 import com.worthy.entity.User;
+import com.worthy.entity.UserRoles;
 
 public class MenuAction extends ActionSupport implements SessionAware, ServletRequestAware{
 
 	private static final long serialVersionUID = -6659925652584240539L;
 
-	private UserDAO userDAO = new UserDAOImpl();
 	private StatefulDaoSupport statfulDao = new StatefulDaoSupportImpl();
+	private UserDAOImpl userDao = new UserDAOImpl();
 	private List<Menu> menuList=new ArrayList<Menu>();
 	private List<MenuItem> menuItems= new ArrayList<MenuItem>();
 	
@@ -54,8 +49,13 @@ public class MenuAction extends ActionSupport implements SessionAware, ServletRe
 	public String menuList()
 	{
 		if(session.get("userId")!=null){
-			menuList = statfulDao.findAll(Menu.class);
-			return SUCCESS;
+			int userId=(int) session.get("userId");
+			if(isUserAuthrized(userId)){
+				menuList = statfulDao.findAll(Menu.class);
+				return SUCCESS;
+			}else {
+				return Constants.UNAUTH;
+			}
 		}
 		return ERROR;
 	}
@@ -121,6 +121,20 @@ public class MenuAction extends ActionSupport implements SessionAware, ServletRe
 		}
 		return SUCCESS;
 	}
+	
+	public boolean isUserAuthrized(int userId){
+		User user=statfulDao.findById(User.class, userId);
+		boolean status=false;
+		List<UserRoles> userRoles=userDao.getUserRolesByUser(user);
+		for(UserRoles obj: userRoles){
+			if(obj.getRoles().getRoleName().equalsIgnoreCase(("admin"))){
+				status=true;
+				break;
+			}
+		}
+		return status;
+	}
+	
 	/* -------------------------------- Getter Setter ------------------------------------- */
 	
 	public Menu getEditMenu() {
@@ -129,22 +143,6 @@ public class MenuAction extends ActionSupport implements SessionAware, ServletRe
 
 	public void setEditMenu(Menu editMenu) {
 		this.editMenu = editMenu;
-	}
-
-	public UserDAO getUserDAO() {
-		return userDAO;
-	}
-
-	public void setUserDAO(UserDAO userDAO) {
-		this.userDAO = userDAO;
-	}
-
-	public StatefulDaoSupport getStatfulDao() {
-		return statfulDao;
-	}
-
-	public void setStatfulDao(StatefulDaoSupport statfulDao) {
-		this.statfulDao = statfulDao;
 	}
 
 	public List<Menu> getMenuList() {

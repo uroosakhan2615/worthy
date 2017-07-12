@@ -56,7 +56,9 @@
 												<li><a href="services.jsp">Services</a></li>
 												<li><a href="portfolio.jsp">portfolio</a></li>
 												<li><a href="Testimonials.jsp">Testimonials</a></li>
+												<li><a href="event.jsp">Event</a></li>
 												<li><a href="contact.jsp">Contact</a></li>
+												
 												
 											</ul>
 										</div>

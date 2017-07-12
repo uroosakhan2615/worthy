@@ -27,6 +27,11 @@
           </a>
         </li> 
         <li>
+          <a href="userBookings">
+            <i class="fa fa-th"></i> <span>My Bookings</span>            
+          </a>
+        </li>
+        <li>
           <a href="userMenuList">
             <i class="fa fa-th"></i> <span>Menu Management</span>            
           </a>

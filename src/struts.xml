@@ -10,12 +10,19 @@
 		
 		<action name="registerMarquee" method="saveUpdateMarquee" class="com.worthy.web.MarqueeAction">
 			<result name="success" type="redirect">marqueeList</result>
+			<result name="error" type="redirect">login</result>
 		</action>
 		
 		<action name="marqueeList" method="marqueeList" class="com.worthy.web.MarqueeAction">
 			<result name="success">/admin/marquee.jsp</result>
 			<result name="error" type="redirect">login</result>
+			<result name="403" type="redirect">403</result>
 		</action>
+		
+		<action name="getMarqueesByCity" method="getMarqueesByCity" class="com.worthy.web.MarqueeAction">
+			<result name="success">/admin/getMarqueesByCity.jsp</result>
+		</action>
+		
 		
 		<action name="getEditMarquee" method="getEditMarqueeJsp" class="com.worthy.web.MarqueeAction">
 			<result name="success">/editMarquee.jsp</result>
@@ -42,8 +49,12 @@
 			<result name="success">/search.jsp</result>
 		</action>
 		
+		<action name="home" method="getHome" class="com.worthy.web.UserAction">
+			<result name="success">home.jsp</result>
+		</action>
+		
 		<action name="admin" method="admin" class="com.worthy.web.UserAction">
-			<result name="success">/admin/home.jsp</result>
+			<result name="success">home.jsp</result>
 		</action>		
 		
 		<action name="submit" method="submit" class="com.worthy.web.UserAction">
@@ -54,6 +65,7 @@
 		<action name="userList" method="list" class="com.worthy.web.UserAction">
 			<result name="success">/admin/user.jsp</result>
 			<result name="error" type="redirect">login</result>
+			<result name="403" type="redirect">403</result>
 		</action>
 		
 		<action name="getEditUser" method="getEditUserJsp" class="com.worthy.web.UserAction">
@@ -63,9 +75,10 @@
 		<action name="menuList" method="menuList" class="com.worthy.web.MenuAction">
 			<result name="success">/admin/menu.jsp</result>
 			<result name="error" type="redirect">login</result>
+			<result name="403" type="redirect">403</result>
 		</action>
 		
-		<action name="userMenuList" method="menuList" class="com.worthy.web.MenuAction">
+		<action name="userMenuList" method="nope" class="com.worthy.web.MenuAction">
 			<result name="success">/user/userMenu.jsp</result>
 			<result name="error" type="redirect">login</result>
 		</action>
@@ -77,6 +90,7 @@
 		<action name="eventList" method="eventList" class="com.worthy.web.EventAction">
 			<result name="success">/admin/events.jsp</result>
 			<result name="error" type="redirect">login</result>
+			<result name="403" type="redirect">403</result>
 		</action>
 		
 		<action name="userEvents" method="userEventList" class="com.worthy.web.EventAction">
@@ -90,7 +104,7 @@
 		
 		<action name="loginPost" method="execute" class="com.worthy.web.LoginAction">
 			<result name="ADMIN" type="redirect">marqueeList</result>
-			<result name="USER" type="redirect">userList</result>
+			<result name="USER" type="redirect">userMarqueeList</result>
 			<result name="LOGIN">/admin/login.jsp</result>
 		</action>
 		
@@ -127,15 +141,30 @@
 			<result name="error" type="redirect">login</result>
 		</action>
 		
+		<action name="editEvent" method="editEvent" class="com.worthy.web.EventAction">
+			<result name="success" type="redirect">eventList</result>
+		</action>
+		
+		<action name="deleteEvent" method="deleteEvent" class="com.worthy.web.EventAction">
+			<result name="success" type="redirect">eventList</result>
+		</action>
+		
 		<action name="profile" method="userProfile" class="com.worthy.web.UserAction">
 			<result name="success">/user/userProfile.jsp</result>
 			<result name="error" type="redirect">login</result>
 		</action>
 		
-		<action name="userMarqueeList" method="userMarquees" class="com.worthy.web.MarqueeAction">
+		<!-- To change -->
+		<action name="userMarqueeList" method="marqueeListForUser" class="com.worthy.web.MarqueeAction">
 			<result name="success">/user/userMarquees.jsp</result>
-			
+			<result name="error" type="redirect">login</result>
 		</action>
+		
+		<action name="userBookings" method="userBookings" class="com.worthy.web.BookingAction">
+			<result name="success">/user/userBookings.jsp</result>
+			<result name="error" type="redirect">login</result>
+		</action>
+		
 		
 		<action name="403" method="get403" class="com.worthy.web.UserAction">
 			<result name="success">/403.jsp</result>

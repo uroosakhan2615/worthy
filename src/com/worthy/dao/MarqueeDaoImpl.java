@@ -10,6 +10,7 @@ import org.hibernate.criterion.Restrictions;
 
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
+import com.worthy.entity.Hall;
 import com.worthy.entity.Marquee;
 
 public class MarqueeDaoImpl implements MarqueeDao {
@@ -25,6 +26,11 @@ public class MarqueeDaoImpl implements MarqueeDao {
 	@Override
 	public List<Marquee> getMarqueesByCity(int cityId) {
 		return session.createQuery("From Marquee where city.id=:cityId").setParameter("cityId", cityId).list();
+	}
+
+	@Override
+	public List<Hall> getHallByMarquee(int marqueeId) {
+		return session.createQuery("From Hall where marquee.id=:marqueeId").setParameter("marqueeId", marqueeId).list();
 	}
 
 }

@@ -197,6 +197,7 @@
 								<label for="marquee name" class="col-sm-2 control-label">City</label>
 								<div class="col-md-10">
 								<select name="marquee.city.id" class="form-control" id="cityId">
+								<option selected value="">Select City</option>
 								<s:iterator value="cities">
 												<option value="<s:property value="id" />">
 													<s:property value="name" /></option>
@@ -208,7 +209,7 @@
 									<label for="marquee name" class="col-sm-2 control-label">Marquee
 										Name</label>
 									<div class="col-md-10" id="marquees">
-										<select name="marquee.name.id" class="form-control">
+										<select name="marquee.name.id" class="form-control" id="marqueeId">
 											<s:iterator value="Marquee Name">
 												<option value="<s:property value="id" />">
 													<s:property value="name" /></option>
@@ -216,13 +217,18 @@
 										</select>
 									</div>
 								</div>
-								<div class="form-group">
-								<label for="hall" class="col-sm-2 control-label"> Hall</label>
-								<div class="col-sm-10">
-									<input type="hall" class="form-control"
-										id="hall" placeholder="hall">
+								<div class="form-group row">
+									<label for="marquee name" class="col-sm-2 control-label">Hall
+										</label>
+									<div class="col-md-10" id="halls">
+										<select name="hall.name.id" class="form-control">
+											<s:iterator value="Hall Name">
+												<option value="<s:property value="id" />">
+													<s:property value="name" /></option>
+											</s:iterator>
+										</select>
+									</div>
 								</div>
-							</div>
 							<div class="form-group">
 								<label for="location" class="col-sm-2 control-label">
 									Location</label>
@@ -279,7 +285,6 @@
 					cityId : cityId
 				},
 				success : function(res) {
-					//alert(res);
 					$("#marquees").html(res);
 				}
 			});

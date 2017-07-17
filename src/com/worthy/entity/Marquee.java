@@ -34,6 +34,10 @@ public class Marquee {
 	@JoinColumn(name="CITY_ID")
 	private City city;
 	
+	@OneToOne
+	@JoinColumn(name="HALL_ID")
+	private Hall hall;
+	
 	@Column(name = "PHONE")
 	private String phone;
 	

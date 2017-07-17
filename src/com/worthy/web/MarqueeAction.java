@@ -15,6 +15,7 @@ import com.worthy.entity.City;
 import com.worthy.entity.Marquee;
 import com.worthy.entity.User;
 import com.worthy.entity.UserRoles;
+import com.worthy.entity.Hall;
 
 public class MarqueeAction extends ActionSupport implements SessionAware{
 
@@ -32,6 +33,7 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 	private SessionMap<String, Object> session;
 	private int cityId;
 	private List<Marquee> marquees;
+	private List<Hall> hall;
 	
 	@Override
 	public void setSession(Map<String, Object> map) {
@@ -146,6 +148,10 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		return status;
 	}
 	
+	public String getHallByMarquee(){
+		hall=marqueeDao.getHallByMarquee(marqueeId);
+		return SUCCESS;
+	}
 	
 /* -------------------------------- Getter Setter ------------------------------------- */
 
@@ -217,6 +223,16 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 
 	public void setMarquees(List<Marquee> marquees) {
 		this.marquees = marquees;
+	}
+
+
+	public List<Hall> getHall() {
+		return hall;
+	}
+
+
+	public void setHall(List<Hall> hall) {
+		this.hall = hall;
 	}
 
 }

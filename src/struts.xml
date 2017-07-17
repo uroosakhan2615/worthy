@@ -23,6 +23,9 @@
 			<result name="success">/admin/getMarqueesByCity.jsp</result>
 		</action>
 		
+		<action name="getHallsByMarquee" method="getHallByMarquee" class="com.worthy.web.MarqueeAction">
+			<result name="success">/admin/getHallByMarquee.jsp</result>
+		</action>
 		
 		<action name="getEditMarquee" method="getEditMarqueeJsp" class="com.worthy.web.MarqueeAction">
 			<result name="success">/editMarquee.jsp</result>
@@ -164,7 +167,6 @@
 			<result name="success">/user/userBookings.jsp</result>
 			<result name="error" type="redirect">login</result>
 		</action>
-		
 		
 		<action name="403" method="get403" class="com.worthy.web.UserAction">
 			<result name="success">/403.jsp</result>

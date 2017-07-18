@@ -13,6 +13,7 @@ import com.worthy.dao.StatefulDaoSupport;
 import com.worthy.dao.StatefulDaoSupportImpl;
 import com.worthy.dao.UserDAOImpl;
 import com.worthy.entity.Booking;
+import com.worthy.entity.Hall;
 import com.worthy.entity.Marquee;
 import com.worthy.entity.User;
 import com.worthy.entity.UserRoles;
@@ -24,42 +25,32 @@ public class BookingAction extends ActionSupport implements SessionAware{
 	private StatefulDaoSupport statfulDao = new StatefulDaoSupportImpl();
 	private UserDAOImpl userDao = new UserDAOImpl();
 	private BookingDaoImpl bookingDao= new BookingDaoImpl();
-//	private MarqueeDaoImpl marqueeDao = new MarqueeDaoImpl();
-//	private Marquee marquee;
-	
 	private List<Booking> bookingsList;
-	
-	private int marqueeId;
-	private Marquee editMarquee;
-	private List<Marquee> marqueeList;
-	private String msg;
 	private SessionMap<String, Object> session;
-	
+	Booking booking;
 	
 	@Override
 	public void setSession(Map<String, Object> map) {
 		session = (SessionMap<String, Object>) map;
 	}
 
-//	public String saveUpdateMarquee()
-//	{	
-//		statfulDao.saveOrUpdate(marquee);
-//		return SUCCESS;
-//	}
-
-//	public String bookingList()
-//	{	
-//		if(session.get("userId")!=null){
-//			int userId=(int) session.get("userId");
-//			if(isUserAuthrized(userId)){
-//				bookingsList=statfulDao.findAll(Marquee.class);
-//				return SUCCESS;
-//			} else {
-//				return Constants.UNAUTH;
-//			}
-//		}
-//		return ERROR;
-//	}
+	public String addNewBooking()
+	{	
+		
+		Hall hallFromDb= statfulDao.findById(Hall.class, booking.getId());
+		Booking bookingNew= new Booking();
+		bookingNew.setHall(hallFromDb);
+		int userId=(int) session.get("userId");
+		User user=statfulDao.findById(User.class, userId);
+		bookingNew.setUser(user);		
+		
+		if(hallFromDb.isStatus()){
+			statfulDao.saveOrUpdate(bookingNew);
+			return SUCCESS;
+		}else {
+			return ERROR;
+		}
+	}
 
 	public String userBookings()
 	{	
@@ -70,48 +61,6 @@ public class BookingAction extends ActionSupport implements SessionAware{
 		}
 		return ERROR;
 	}
-	
-	//Get jsp page to edit marquee
-	public String getEditMarqueeJsp()
-	{	
-		if(session.get("userId")!=null){
-			editMarquee=statfulDao.findById(Marquee.class, marqueeId);
-			return SUCCESS;
-		}
-		return ERROR;
-	}
-
-	//Update edited marquee
-//	public String editMarquee()
-//	{	
-//		if(session.get("userId")!=null)
-//		{
-//			Marquee marqueefromDb=statfulDao.findById(Marquee.class, marquee.getId());
-//			if(marqueefromDb!=null){
-//				marqueefromDb.setMarqueeName(marquee.getMarqueeName());
-//				marqueefromDb.setMarqueeEmailId(marquee.getMarqueeEmailId());
-//				marqueefromDb.setMarqueeContact(marquee.getMarqueeContact());
-//				marqueefromDb.setMarqueeAddress(marquee.getMarqueeAddress());
-//				statfulDao.saveOrUpdate(marqueefromDb);
-//			}
-//			return SUCCESS;
-//		}
-//		return ERROR;
-//	}
-
-//	public String deleteMarquee() {
-//		if(session.get("userId")!=null){
-//			Marquee marqueeToDelete=statfulDao.findById(Marquee.class, marqueeId);
-//			if(marqueeToDelete!=null){
-//				marqueeToDelete.setStatus(false);
-//				statfulDao.saveOrUpdate(marqueeToDelete);
-//				return SUCCESS;
-//			}
-//			return ERROR;
-//		}
-//		return SUCCESS;
-//	}
-
 	
 	public boolean isUserAuthrized(int userId){
 		User user=statfulDao.findById(User.class, userId);
@@ -129,45 +78,20 @@ public class BookingAction extends ActionSupport implements SessionAware{
 	
 /* -------------------------------- Getter Setter ------------------------------------- */
 
-
-	public List<Marquee> getMarqueeList() {
-		return marqueeList;
-	}
-
-	public void setMarqueeList(List<Marquee> marqueeList) {
-		this.marqueeList = marqueeList;
-	}
-
-	public Marquee getEditMarquee() {
-		return editMarquee;
-	}
-
-	public void setEditMarquee(Marquee editMarquee) {
-		this.editMarquee = editMarquee;
-	}
-
-	public int getMarqueeId() {
-		return marqueeId;
-	}
-
-	public void setMarqueeId(int marqueeId) {
-		this.marqueeId = marqueeId;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
 	public List<Booking> getBookingsList() {
 		return bookingsList;
 	}
 
 	public void setBookingsList(List<Booking> bookingsList) {
 		this.bookingsList = bookingsList;
+	}
+
+	public Booking getBooking() {
+		return booking;
+	}
+
+	public void setBooking(Booking booking) {
+		this.booking = booking;
 	}
 
 }

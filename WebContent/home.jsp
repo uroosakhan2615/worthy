@@ -222,7 +222,7 @@
 									<label for="marquee name" class="col-sm-2 control-label">Hall
 										</label>
 									<div class="col-md-10" id="halls">
-										<select name="hall.name.id" class="form-control">
+										<select name="booking.id" class="form-control">
 											<s:iterator value="Hall Name">
 												<option value="<s:property value="id" />">
 													<s:property value="name" /></option>

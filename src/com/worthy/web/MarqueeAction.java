@@ -43,7 +43,6 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 
 	public String saveUpdateMarquee()
 	{	
-		
 		City city= statfulDao.findById(City.class, marquee.getCity().getId());
 		marquee.setCity(city);
 		statfulDao.saveOrUpdate(marquee);

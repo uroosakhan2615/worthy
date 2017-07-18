@@ -1,5 +1,6 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 	<select name="marquee.name.id" class="form-control" id="marqueeId">
+		<option>Select A Marquee</option>
 		<s:iterator value="marquees">
 			<option value="<s:property value="id" />"><s:property value="marqueeName" /></option>
 		</s:iterator>
@@ -15,7 +16,6 @@ $("#marqueeId").change(function (){
 			marqueeId : marqueeId
 		},
 		success : function(res) {
-			alert(res);
 			$("#halls").html(res);
 		}
 	});

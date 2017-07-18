@@ -192,7 +192,7 @@
 		<div class="modal-body">
 				<div class="row">
 					<div class="col-md-12">
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post" action="bookHall">
 							<div class="form-group row">
 								<label for="marquee name" class="col-sm-2 control-label">City</label>
 								<div class="col-md-10">
@@ -210,6 +210,7 @@
 										Name</label>
 									<div class="col-md-10" id="marquees">
 										<select name="marquee.name.id" class="form-control" id="marqueeId">
+										<option>Select A Marquee</option>
 											<s:iterator value="Marquee Name">
 												<option value="<s:property value="id" />">
 													<s:property value="name" /></option>
@@ -260,25 +261,22 @@
 										placeholder="capacity">
 								</div>
 							</div>
-							
-							<div class="control-group">
-					        <!-- Button -->
-						 <div class="form-group">
-						 <div class="col-sm-6">
-					<input type="submit" class="btn btn-success" value="Booking Done">
-					</div>
-			</div>		
-					</div>
-								
-							<div class="control-group">
-					        <!-- Button -->
-						 <div class="form-group">
-						 <div class="col-sm-6">
-					<input type="submit" class="btn btn-success" value="Cancel Booking">
-					</div>
-			</div>		
-					</div>
-					</form>
+
+								<div class="control-group">
+									<!-- Button -->
+									<div class="form-group">
+										<div class="col-sm-2">
+										</div>
+										<div class="col-sm-6">
+											<input type="submit" class="btn btn-success"
+												value="Booking Done">
+												
+												<input type="button" class="btn btn-success"
+												value="Cancel Booking">
+										</div>
+									</div>
+								</div>
+							</form>
 				</div>
 			</div>
 		</div>

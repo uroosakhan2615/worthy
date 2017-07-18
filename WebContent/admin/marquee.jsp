@@ -190,58 +190,54 @@
 	
 	<script>
 		
-	$(".body").mCustomScrollbar({
-		theme:"inset-2-dark"
+$('#marqueeListTable').dataTable();
+
+$(".editMarquee").click(function() {
+	var marqueeId = this.id;
+	$.ajax({
+		type : 'POST',
+		url : "getEditMarquee.action",
+		data : {
+			marqueeId : marqueeId
+		},
+		success : function(res) {
+			$("#editMarqueeModalDiv").html(res);
+			$("#editMarqueeModal").modal("show");
+			$(".modal-backdrop").remove();
+		}
 	});
+});
 
-	$('#marqueeListTable').dataTable();
-
-	$(".editMarquee").click(function() {
-		var marqueeId = this.id;
+$(".deleteMarquee").click(function() {
+	var marqueeId = this.id;
+	
+	$("#confirm-delete").modal("show");
+	$("#modalDeleteBtn").click(function(e){
+		e.preventDefault();
+		
 		$.ajax({
 			type : 'POST',
-			url : "getEditMarquee.action",
+			url : "deleteMarquee.action",
 			data : {
 				marqueeId : marqueeId
 			},
 			success : function(res) {
-				$("#editMarqueeModalDiv").html(res);
-				$("#editMarqueeModal").modal("show");
-				$(".modal-backdrop").remove();
+				//alert(res);
+				//$("#responseMessageDiv").html(res);
+				/*
+				toastr.success("Marquee deleted successfully.", "Yay!!", {
+					"timeOut" : "3000",
+					"progressBar" : true,
+					"extendedTImeout" : "0"
+				});
+				*/
+				location.reload();
+				//$("#deleteMarqueeModal").modal("show");
+				//  $(".modal-backdrop").removeClass("in");
 			}
 		});
 	});
-
-	$(".deleteMarquee").click(function() {
-		var marqueeId = this.id;
-		
-		$("#confirm-delete").modal("show");
-		$("#modalDeleteBtn").click(function(e){
-			e.preventDefault();
-			
-			$.ajax({
-				type : 'POST',
-				url : "deleteMarquee.action",
-				data : {
-					marqueeId : marqueeId
-				},
-				success : function(res) {
-					//alert(res);
-					//$("#responseMessageDiv").html(res);
-					/*
-					toastr.success("Marquee deleted successfully.", "Yay!!", {
-						"timeOut" : "3000",
-						"progressBar" : true,
-						"extendedTImeout" : "0"
-					});
-					*/
-					location.reload();
-					//$("#deleteMarqueeModal").modal("show");
-					//  $(".modal-backdrop").removeClass("in");
-				}
-			});
-		});
-	});
+});
 	</script>
 </body>
 </html>

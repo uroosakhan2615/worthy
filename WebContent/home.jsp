@@ -260,6 +260,23 @@
 										placeholder="capacity">
 								</div>
 							</div>
+							
+							<div class="control-group">
+					        <!-- Button -->
+						 <div class="form-group">
+						 <div class="col-sm-6">
+					<input type="submit" class="btn btn-success" value="Booking Done">
+					</div>
+			</div>		
+					</div>
+								
+							<div class="control-group">
+					        <!-- Button -->
+						 <div class="form-group">
+						 <div class="col-sm-6">
+					<input type="submit" class="btn btn-success" value="Cancel Booking">
+					</div>
+			</div>		
 					</div>
 					</form>
 				</div>

@@ -470,10 +470,6 @@
 <script>
 
 
-$("body").mCustomScrollbar({
-	theme:"inset-2-dark"
-});
-
 $('#eventTable').dataTable();
 
 $('#startDate, #endDate').datepicker({

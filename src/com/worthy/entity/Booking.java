@@ -1,5 +1,7 @@
 package com.worthy.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +26,16 @@ public class Booking {
 	@OneToOne
 	@JoinColumn(name="USER_ID")
 	User user;
-
+	
+	@Column(name = "FROM_DATE")
+	private Date fromDate;
+	
+	@Column(name = "TO_DATE")
+	private Date toDate;
+	
+	@Column(name = "BOOKING_RENT")
+	private int rent;
+	
 	public int getId() {
 		return id;
 	}
@@ -48,5 +59,29 @@ public class Booking {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+
+	public Date getFromDate() {
+		return fromDate;
+	}
+
+	public void setFromDate(Date fromDate) {
+		this.fromDate = fromDate;
+	}
+
+	public Date getToDate() {
+		return toDate;
+	}
+
+	public void setToDate(Date toDate) {
+		this.toDate = toDate;
+	}
+
+	public int getRent() {
+		return rent;
+	}
+
+	public void setRent(int rent) {
+		this.rent = rent;
+	}
+
 }

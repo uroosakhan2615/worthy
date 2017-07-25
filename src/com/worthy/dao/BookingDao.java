@@ -7,4 +7,5 @@ import com.worthy.entity.Event;
 
 public interface BookingDao {
 	public List<Booking> getBookingsByUserId(int userId);
+	
 }

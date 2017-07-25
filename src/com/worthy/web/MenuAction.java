@@ -60,6 +60,16 @@ public class MenuAction extends ActionSupport implements SessionAware, ServletRe
 		return ERROR;
 	}
 	
+	public String userMenuList()
+	{
+		if(session.get("userId")!=null){
+			int userId=(int) session.get("userId");
+				menuList = statfulDao.findAll(Menu.class);
+				return SUCCESS;
+		}
+		return ERROR;
+	}
+	
 	public String addMenu(){
 		try {
 			String filePath = servletRequest.getRealPath("/");

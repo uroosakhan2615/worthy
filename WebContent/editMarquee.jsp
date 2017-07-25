@@ -77,8 +77,26 @@
 											required>
 									</div>
 								</div>
+								
+								<s:iterator value="editMarquee.halls" var="item" status="varStatus">
+									<div class="form-group row">
+										<div class="col-md-2">
+											<label class="control-label">Hall ${varStatus.index+1}</label>
+										</div>
+										<br>
+										<div class="col-md-8">
+											<input class="form-control" type="hidden" name="marquee.halls[${varStatus.index}].id" value="${item.id}">
+											<label class="col-md-4 control-label">Hall name</label>
+											<input class="form-control" type="text" name="marquee.halls[${varStatus.index}].name" value="${item.name}">
+											<label class="col-md-4 control-label">Hall capacity</label>
+											<input class="form-control" type="number" name="marquee.halls[${varStatus.index}].capacity" value="${item.capacity}">
+											<label class="col-md-4 control-label">Hall Rent</label>
+											<input class="form-control" type="number" name="marquee.halls[${varStatus.index}].rent" value="${item.rent}">
+										</div>
+									</div>
+									<br>
+								</s:iterator>
 
-								<!-- Button -->
 								<div class="form-group row">
 									<label class="col-md-4 control-label" for="submit"></label>
 									<div class="col-md-8">

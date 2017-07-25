@@ -1,11 +1,14 @@
 package com.worthy.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -34,9 +37,8 @@ public class Marquee {
 	@JoinColumn(name="CITY_ID")
 	private City city;
 	
-	@OneToOne
-	@JoinColumn(name="HALL_ID")
-	private Hall hall;
+	@OneToMany(mappedBy="marquee")
+	private List<Hall> halls;
 	
 	@Column(name = "PHONE")
 	private String phone;
@@ -117,6 +119,14 @@ public class Marquee {
 
 	public void setCity(City city) {
 		this.city = city;
+	}
+
+	public List<Hall> getHalls() {
+		return halls;
+	}
+
+	public void setHalls(List<Hall> halls) {
+		this.halls = halls;
 	}
 
 }

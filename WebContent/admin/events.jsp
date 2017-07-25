@@ -343,7 +343,7 @@
 					</div>
 						<div class="box">
 							<div class="box-header">
-								<h3 class="box-title">Menus</h3>
+								<h3 class="box-title">Events</h3>
 							</div>
 							<div class="box-body">
 								<table id="eventTable" class="table table-bordered table-hover">

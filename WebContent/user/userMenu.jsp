@@ -20,6 +20,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
 		<jsp:include page="userSidebar.jsp"></jsp:include>
+		<jsp:include page="userHeader.jsp"></jsp:include>
 		<div class="content-wrapper">
 
 			<section class="content">

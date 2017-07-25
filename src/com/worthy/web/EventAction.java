@@ -97,8 +97,7 @@ public class EventAction extends ActionSupport implements SessionAware{
 	public String userEventList()
 	{	
 		if(session.get("userId")!=null){
-			eventList=userDao.getUserEvents((int) session.get("userId"));
-			//eventList=statfulDao.findAll(Event.class);
+			eventList=eventDao.getActiveEvents();
 			marqueeList=statfulDao.findAll(Marquee.class);
 			menuList=statfulDao.findAll(Menu.class);
 			userList=statfulDao.findAll(User.class);

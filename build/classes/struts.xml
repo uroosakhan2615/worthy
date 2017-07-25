@@ -81,7 +81,7 @@
 			<result name="403" type="redirect">403</result>
 		</action>
 		
-		<action name="userMenuList" method="nope" class="com.worthy.web.MenuAction">
+		<action name="userMenuList" method="userMenuList" class="com.worthy.web.MenuAction">
 			<result name="success">/user/userMenu.jsp</result>
 			<result name="error" type="redirect">login</result>
 		</action>
@@ -132,7 +132,8 @@
 		</action>
 		
 		<action name="deleteMarquee" method="deleteMarquee" class="com.worthy.web.MarqueeAction">
-			<result name="success">success.jsp</result>
+			<result name="success" type="redirect">marqueeList</result>
+			<result name="error" type="redirect">login</result>
 		</action>
 		
 		<action name="addEvent" method="addEvent" class="com.worthy.web.EventAction">
@@ -170,6 +171,24 @@
 		
 		<action name="403" method="get403" class="com.worthy.web.UserAction">
 			<result name="success">/403.jsp</result>
+		</action>
+		
+		<action name="bookings" method="bookings" class="com.worthy.web.BookingAction">
+			<result name="success">/admin/bookings.jsp</result>
+			<result name="error" type="redirect">login</result>
+		</action>
+		
+		<action name="bookHall" method="addNewBooking" class="com.worthy.web.BookingAction">
+			<result name="success" type="redirect">bookings</result>
+		</action>
+		
+		<action name="getEditBooking" method="getEditBookingJsp" class="com.worthy.web.BookingAction">
+			<result name="success">/editBooking.jsp</result>
+			<result name="error" type="redirect">login</result>
+		</action>
+		
+		<action name="getHallById" method="getHallById" class="com.worthy.web.BookingAction">
+			 <result name="success">/admin/RentNcapacity.jsp</result>
 		</action>
 		
 	</package>

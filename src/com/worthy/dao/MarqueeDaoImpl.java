@@ -33,4 +33,9 @@ public class MarqueeDaoImpl implements MarqueeDao {
 		return session.createQuery("From Hall where marquee.id=:marqueeId").setParameter("marqueeId", marqueeId).list();
 	}
 
+	@Override
+	public List<Marquee> getActiveMarquees() {
+		return session.createQuery("From Marquee where status=true").list();
+	}
+
 }

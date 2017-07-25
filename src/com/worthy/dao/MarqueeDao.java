@@ -7,6 +7,7 @@ import com.worthy.entity.Marquee;
 
 public interface MarqueeDao {
 
+	List<Marquee> getActiveMarquees();
 	List<Marquee> getMarqueesByCity(int cityId);
 	List<Hall> getHallByMarquee(int marqueeId);
 }

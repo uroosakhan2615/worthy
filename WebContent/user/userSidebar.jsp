@@ -33,7 +33,7 @@
         </li>
         <li>
           <a href="userMenuList">
-            <i class="fa fa-th"></i> <span>Menu Management</span>            
+            <i class="fa fa-th"></i> <span>Menus</span>            
           </a>
         </li> 
         <li>
@@ -42,11 +42,11 @@
           </a>
         </li>
         
-        <li>
+        <%-- <li>
           <a href="profile">
             <i class="fa fa-th"></i> <span>Profile</span>            
           </a>
-        </li>
+        </li> --%>
         
       </ul>
       

@@ -64,9 +64,9 @@
 													<div class="form-group row">
 														<label class="col-md-4 control-label">City</label>
 														<div class="col-md-8">
-															<select name="marquee.city.name" class="form-control">
+															<select name="marquee.city.id" class="form-control">
 																<s:iterator value="cities">
-																	<option value="<s:property value="name" />"><s:property value="name" /></option>
+																	<option value="<s:property value="id" />"><s:property value="name" /></option>
 																</s:iterator>
 															</select>
 														</div>
@@ -78,8 +78,7 @@
 														<div class="col-md-8">
 															<input id="marqueeContact" name="marquee.marqueeContact"
 																type="number" placeholder="Contact Number"
-																class="form-control input-md" required="">
-
+																class="form-control input-md" required>
 														</div>
 													</div>
 
@@ -90,6 +89,47 @@
 															<input id="emailId" name="marquee.marqueeEmailId"
 																type="email" placeholder="marquee Email Id"
 																class="form-control input-md" required>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<label class="col-md-4 control-label" for="field1">Add
+															Hall</label>
+														<div class="controls col-md-8">
+															<div class="entry">
+																<div class="form-group">
+																	<input class="form-control" name="marquee.halls[0].name"
+																		type="text" placeholder="Hall Name" />
+																		
+																	<input class="form-control" name="marquee.halls[0].capacity"
+																		type="number" placeholder="Hall Capacity" />
+																		
+																	<input class="form-control" name="marquee.halls[0].rent"
+																		type="number" placeholder="Hall Rent" />
+
+																</div>
+															</div>
+															<br>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-md-4 control-label" for="field1">Add
+															Hall</label>
+														<div class="controls col-md-8">
+															<div class="entry">
+																<div class="form-group">
+																	<input class="form-control"
+																		name="marquee.halls[1].name" type="text"
+																		placeholder="Hall Name" /> <input
+																		class="form-control" name="marquee.halls[1].capacity"
+																		type="number" placeholder="Hall Capacity" /> <input
+																		class="form-control" name="marquee.halls[1].rent"
+																		type="number" placeholder="Hall Rent" />
+
+																</div>
+															</div>
+															<br>
 														</div>
 													</div>
 
@@ -133,17 +173,33 @@
 											<th>Marquees Address</th>
 											<th>Marquee Contact No.</th>
 											<th>Marquee Email</th>
+											<th>Halls</th>
 											<th>Edit</th>
 											<th>Delete</th>
 										</tr>
 									</thead>
 									<tbody>
-										<s:iterator value="marqueeList" status="varStatus">
+										<s:iterator value="marqueeList">
 											<tr>
 												<td><s:property value="marqueeName" /></td>
 												<td><s:property value="marqueeAddress" /></td>
 												<td><s:property value="marqueeContact" /></td>
 												<td><s:property value="marqueeEmailId" /></td>
+												<td>
+													<table>
+														<tr>
+														<s:iterator value="halls" var="item" status="varStatus">
+															<tr>
+																<td>
+																	<c:if test="${not empty item}">
+																		${item.name}
+																	</c:if>
+																</td>
+															</tr>
+														</s:iterator>
+														</tr>
+													</table>
+												</td>
 												<td><a class="btn btn-sm btn-default editMarquee"
 													href="#" id="<s:property value="id" />"><span class="glyphicon glyphicon-edit"> Edit</span></a></td>
 												<td><a class="btn btn-sm btn-danger deleteMarquee"
@@ -157,6 +213,7 @@
 				</div>
 			</section>
 		</div>
+		
 		<jsp:include page="footer.jsp"></jsp:include>
 		<div class="control-sidebar-bg"></div>
 	</div>
@@ -238,6 +295,8 @@ $(".deleteMarquee").click(function() {
 		});
 	});
 });
+
+
 	</script>
 </body>
 </html>

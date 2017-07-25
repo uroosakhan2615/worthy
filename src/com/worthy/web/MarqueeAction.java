@@ -13,6 +13,7 @@ import com.worthy.dao.StatefulDaoSupportImpl;
 import com.worthy.dao.UserDAOImpl;
 import com.worthy.entity.City;
 import com.worthy.entity.Marquee;
+import com.worthy.entity.MenuItem;
 import com.worthy.entity.User;
 import com.worthy.entity.UserRoles;
 import com.worthy.entity.Hall;
@@ -45,7 +46,15 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 	{	
 		City city= statfulDao.findById(City.class, marquee.getCity().getId());
 		marquee.setCity(city);
+		marquee.setStatus(true);
+		
+		for(Hall obj: marquee.getHalls()){
+			obj.setMarquee(marquee);
+			obj.setStatus(true);
+		}
+		
 		statfulDao.saveOrUpdate(marquee);
+		statfulDao.saveEntities(marquee.getHalls());
 		return SUCCESS;
 	}
 
@@ -54,7 +63,7 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		if(session.get("userId")!=null){
 			int userId=(int) session.get("userId");
 			if(isUserAuthrized(userId)){
-				marqueeList=statfulDao.findAll(Marquee.class);
+				marqueeList=marqueeDao.getActiveMarquees();
 				cities=statfulDao.findAll(City.class);
 				return SUCCESS;
 			} else {
@@ -82,13 +91,20 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		{
 			Marquee marqueefromDb=statfulDao.findById(Marquee.class, marquee.getId());
 			if(marqueefromDb!=null){
+				
+				for(Hall obj: marquee.getHalls()){
+					obj.setMarquee(marqueefromDb);
+				}
+				
 				City city= statfulDao.findById(City.class, marquee.getCity().getId());
 				marqueefromDb.setCity(city);
 				marqueefromDb.setMarqueeName(marquee.getMarqueeName());
 				marqueefromDb.setMarqueeEmailId(marquee.getMarqueeEmailId());
 				marqueefromDb.setMarqueeContact(marquee.getMarqueeContact());
 				marqueefromDb.setMarqueeAddress(marquee.getMarqueeAddress());
+				marqueefromDb.setHalls(marquee.getHalls());
 				statfulDao.saveOrUpdate(marqueefromDb);
+				statfulDao.saveEntities(marquee.getHalls());
 			}
 			return SUCCESS;
 		}
@@ -99,6 +115,9 @@ public class MarqueeAction extends ActionSupport implements SessionAware{
 		if(session.get("userId")!=null){
 			Marquee marqueeToDelete=statfulDao.findById(Marquee.class, marqueeId);
 			if(marqueeToDelete!=null){
+				for(Hall obj: marqueeToDelete.getHalls()){
+					obj.setStatus(false);
+				}
 				marqueeToDelete.setStatus(false);
 				statfulDao.saveOrUpdate(marqueeToDelete);
 				return SUCCESS;
